@@ -1,12 +1,4 @@
 <?php
-/* deceased
-Flight::map('cachedRoute', function($pattern, callable $callback, array $options = []){
-	$kind = $options["kind"] ?: "html";
-	$url  = $options["url"]  ?: $_SERVER["REQUEST_URI"];
-	
-	Flight::route($pattern, $callback);
-});
-*/
 
 Flight::before('route', function(&$params, &$output){
 	Flight::getCached();

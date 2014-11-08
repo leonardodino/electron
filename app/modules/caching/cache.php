@@ -97,22 +97,4 @@ Class Caching{
 		Flight::arrive(false);
 	}
 	
-	/* deceased
-	static function extraEasy($kind = 'html'){
-		return self::easy($_SERVER["REQUEST_URI"], $kind);
-		
-	}
-	*/
-	
-	/*
-	//DEPRECATED BY CRON JOBS
-	static function invalidate_cached_version($url){
-		return $url;
-	}
-	
-	static function empty_caches(){
-		return 'dont do that!';
-	}
-	*/
-	
 }
