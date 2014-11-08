@@ -54,7 +54,7 @@ Class Caching_FileFactory{
     
     //URL->FILESYSTEM resolving
     static function URL_to_CACHEPATH($url, $kind){
-        $url= strtok($url,'?'); //sanitize query
+        $url = strtok($url,'?'); //sanitize query
         $url = self::add_trailing_slash($url);
         $url = ltrim($url, '/'); //remove beggining slash
         
@@ -111,8 +111,7 @@ Class Caching_FileFactory{
                 $fingerprint = false;
             }
         }catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "
-";
+            echo 'Caught exception: ',  $e->getMessage(), '\n';
         }
         return $fingerprint;
     }
