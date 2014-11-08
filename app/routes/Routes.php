@@ -15,3 +15,7 @@ Flight::route('/child', function(){
 	//Flight::setCached($page);
 	Flight::arrive(false);
 });
+
+Flight::route('/cachin', function(){
+	Flight::render('test.html', ['page'=>['title'=> 'Hellow Cache', 'text'=> 'caching ipsum!']]);
+});
