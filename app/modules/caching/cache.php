@@ -91,9 +91,9 @@ Class Caching{
 		}
 		return false;
 	}
-	static function extraEasy($content){
+	static function extraEasy($content, $kind = 'html'){
 		$page = FF::fingerprint($content);
-		Flight::setCached($page);
+		Flight::setCached($page, true, $kind);
 		Flight::arrive(false);
 	}
 	
