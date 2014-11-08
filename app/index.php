@@ -9,8 +9,8 @@
         
         require_once './modules/mini/Slash.php';
         
-//         require_once './modules/error/php_error.php';
-//         \php_error\reportErrors();
+         require_once './modules/error/php_error.php';
+         \php_error\reportErrors();
         
         require_once './modules/flight/Flight.php';
         //CONFIG
