@@ -1,0 +1,19 @@
+Options -Indexes
+RewriteEngine on
+
+RewriteBase /
+
+
+
+# Rewrite any file calls to the public directory
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule ^(.+)$ public/$1 [L]
+
+
+# main
+RewriteCond %{REQUEST_URI} !=app/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) app/index.php?$1 [L,PT]

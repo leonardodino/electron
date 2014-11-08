@@ -1,0 +1,118 @@
+<?php
+
+require_once __DIR__.'/filefactory.php';
+use Caching_FileFactory as FF;
+
+Class Caching{
+	static $cache_path;
+	
+	static function init(){
+		if(Flight::has('caching.path')){
+			self::$cache_path = Flight::get('caching.path');
+		}else{
+			self::$cache_path = "./_cache";
+			Flight::set('caching.path', "./_cache");
+		}
+	}
+	
+	
+	static function has_cached_version($url, $kind){
+		$filename = FF::URL_to_CACHEFILE($url, $kind);
+		return file_exists($filename);
+	}
+	
+	static function get_cached_version($url, $kind){
+		$filename    = FF::URL_to_CACHEFILE($url, $kind);
+		$fingerprint = FF::fingerprint_from_file($filename, $url, $kind);
+		return $fingerprint;
+	}
+	
+	static function set_cached_version($url, $kind, array $page){
+		$cache_path = FF::URL_to_CACHEPATH($url, $kind);
+		$cache_file = FF::URL_to_CACHEFILE($url, $kind);
+		$return = false;
+		
+		try{
+			//create & check cache dir
+			$dirOK = FF::makeCleanDir($cache_path);
+			
+			//get contents
+			//write to file
+			if($dirOK){
+			$content  = $page['content'];
+			$content .= Flight::perfLog('cached');
+				//create cache & measure size
+				$bytes = file_put_contents($cache_file, $content);
+				if($bytes === 0){throw new Exception('0bytes written');}
+				
+				$return = $bytes !== FALSE;
+			}
+			
+			//error handling
+			if(!$return){throw new Exception('error on write');}
+
+		}catch (Exception $e){
+			echo 'Caught exception: ',  $e->getMessage(), "\n";
+		}
+		
+		
+		return $return;
+	}
+	
+	
+	static function easy($url, $kind = 'html', $echo = true){
+		if(self::has_cached_version($url, $kind)){
+			$cache = self::get_cached_version($url, $kind);
+
+			//checks if client has page cached
+			if(Helpers::client_has_local_copy($cache['etag'])){
+				header('etag: '.$cache['etag']);
+				header('custom: '.$cache['etag']);
+				Flight::halt(304);
+			}
+			
+			//otherwise, deliver content
+			if($cache['content']){
+				
+				//send headers
+				header('etag: '.$cache['etag']);
+				//Flight::etag($cache['etag']);
+				
+				//send content
+				$res  = $cache['content'];
+				//end
+
+				if($echo){
+					echo($res);
+					ob_end_flush();
+				}
+				return $res;
+			}
+		}
+		return false;
+	}
+	static function extraEasy($content){
+		$page = FF::fingerprint($content);
+		Flight::setCached($page);
+		Flight::arrive(false);
+	}
+	
+	/* deceased
+	static function extraEasy($kind = 'html'){
+		return self::easy($_SERVER["REQUEST_URI"], $kind);
+		
+	}
+	*/
+	
+	/*
+	//DEPRECATED BY CRON JOBS
+	static function invalidate_cached_version($url){
+		return $url;
+	}
+	
+	static function empty_caches(){
+		return 'dont do that!';
+	}
+	*/
+	
+}
