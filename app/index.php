@@ -20,7 +20,7 @@
         //BINDINGS
         require_once './modules/view/View.php';
         require_once './modules/helpers/Helpers.php';
-        require_once './modules/init/Init.php';
+        require_once './modules/mini/Init.php';
         
         //CACHE BINDINGS
         require_once './modules/caching/Caching.php';
