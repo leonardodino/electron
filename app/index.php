@@ -6,13 +6,13 @@
     } else {
         //BASE
         date_default_timezone_set('America/Sao_Paulo');
-        
         require_once './modules/mini/Slash.php';
         
-         require_once './modules/error/php_error.php';
-         \php_error\reportErrors();
         //CONFIG
         include_once './modules/config/Config.php';
+        
+        require_once './modules/error/php_error.php';
+        \php_error\reportErrors();
         
         require_once './modules/flight/Flight.php';
         $ENV->export();
