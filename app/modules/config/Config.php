@@ -10,7 +10,8 @@ Class Env{
 	}
 
 	public function __get($key){
-		return $this->variables[$key];
+		if( isset($this->variables[$key]) ) return $this->variables[$key];
+		return NULL;
 	}
 
 	public function __set($key, $value){
