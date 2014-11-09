@@ -22,7 +22,7 @@ Class Env{
 		$alenght = count($variables);
 		if($alenght){
 			foreach ($variables as $k => $v) {
-				$this->vars[$k] = $v;
+				$this->variables[$k] = $v;
 			}	
 		}
 	}
