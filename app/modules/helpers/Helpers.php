@@ -107,7 +107,7 @@ Flight::map('perfLog', function($kind, $echo = false, $res_type = 'html', $time 
 	return false;
 });
 
-Flight::map('arrive', function($halt = true){
+Flight::map('arrive', function($halt = false){
 	echo Flight::perfLog('access');
 	echo Flight::perfLog('elapsed');
 	if($halt){

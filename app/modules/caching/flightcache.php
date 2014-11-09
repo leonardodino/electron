@@ -11,7 +11,7 @@ Flight::map('getCached', function($kind = 'html', $url = NULL){
 	
 	$cached = Caching::easy($url, $kind);
 	if($cached){
-		Flight::arrive();
+		Flight::arrive(true);
 	};
 });
 
