@@ -11,10 +11,11 @@
         
          require_once './modules/error/php_error.php';
          \php_error\reportErrors();
+        //CONFIG
+        include_once './modules/config/Config.php';
         
         require_once './modules/flight/Flight.php';
-        //CONFIG
-        include_once './config.php';
+        $ENV->export();
         
         //BINDINGS
         require_once './modules/view/View.php';
