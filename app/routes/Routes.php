@@ -10,12 +10,10 @@ Flight::route('/', function(){
 
 Flight::route('/child', function(){
 	$content = View::fetch('test.html', ['page'=>['title'=> 'Hellow children World', 'text'=> 'ipsum ipsum!']]);
-	echo($content);
-	//$page = FF::fingerprint($content);
-	//Flight::setCached($page);
-	Flight::arrive(false);
+	Caching::extraEasy($content);
 });
 
 Flight::route('/cachin', function(){
-	Flight::render('test.html', ['page'=>['title'=> 'Hellow Cache', 'text'=> 'caching ipsum!']]);
+	View::render('test.html', ['page'=>['title'=> 'Hellow Cache', 'text'=> 'caching ipsum!']]);
+	Flight::arrive();
 });
