@@ -63,8 +63,7 @@ Class Helpers{
 */
 
 Flight::map('perfLog', function($kind, $echo = false, $res_type = 'html', $time = 0){
-	//if(Flight::get('perfLogs')){
-	if(true){
+	if(Flight::get('perfLogs')){
 		//delcaring
 		$title = $kind;
 		$value = NULL;
