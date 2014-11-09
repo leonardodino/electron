@@ -11,8 +11,10 @@
         //CONFIG
         include_once './modules/config/Config.php';
         
-        require_once './modules/error/php_error.php';
-        \php_error\reportErrors();
+        if($ENV->php_error){
+            require_once './modules/error/php_error.php';
+            \php_error\reportErrors();
+        }
         
         require_once './modules/flight/Flight.php';
         $ENV->export();
