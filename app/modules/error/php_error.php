@@ -286,24 +286,24 @@
              * A mapping of PHP internal symbols,
              * mapped to descriptions of them.
              */
-            private static $PHP_SYMBOL_MAPPINGS = array(
-                    '$end'                          => 'end of file',
-                    'T_ABSTRACT'                    => 'abstract',
-                    'T_AND_EQUAL'                   => "'&='",
-                    'T_ARRAY'                       => 'array',
-                    'T_ARRAY_CAST'                  => 'array cast',
-                    'T_AS'                          => "'as'",
-                    'T_BOOLEAN_AND'                 => "'&&'",
-                    'T_BOOLEAN_OR'                  => "'||'",
-                    'T_BOOL_CAST'                   => 'boolean cast',
-                    'T_BREAK'                       => 'break',
-                    'T_CASE'                        => 'case',
-                    'T_CATCH'                       => 'catch',
-                    'T_CLASS'                       => 'class',
-                    'T_CLASS_C'                     => '__CLASS__',
-                    'T_CLONE'                       => 'clone',
-                    'T_CLOSE_TAG'                   => 'closing PHP tag',
-                    'T_CONCAT_EQUAL'                => "'.='",
+                private static $PHP_SYMBOL_MAPPINGS = array(
+                        '$end'                      => 'end of file',
+                        'T_ABSTRACT'                    => 'abstract',
+                        'T_AND_EQUAL'                   => "'&='",
+                        'T_ARRAY'                   => 'array',
+                        'T_ARRAY_CAST'                  => 'array cast',
+                        'T_AS'                      => "'as'",
+                        'T_BOOLEAN_AND'             => "'&&'",
+                        'T_BOOLEAN_OR'              => "'||'",
+                        'T_BOOL_CAST'               => 'boolean cast',
+                        'T_BREAK'                   => 'break',
+                        'T_CASE'                    => 'case',
+                        'T_CATCH'                   => 'catch',
+                        'T_CLASS'                   => 'class',
+                        'T_CLASS_C'                 => '__CLASS__',
+                        'T_CLONE'                   => 'clone',
+                        'T_CLOSE_TAG'               => 'closing PHP tag',
+                        'T_CONCAT_EQUAL'                => "'.='",
                     'T_CONST'                       => 'const',
                     'T_CONSTANT_ENCAPSED_STRING'    => 'string',
                     'T_CONTINUE'                    => 'continue',
@@ -324,10 +324,10 @@
                     'T_ELSEIF'                      => 'elseif',
                     'T_EMPTY'                       => 'empty',
                     'T_ENCAPSED_AND_WHITESPACE'     => 'non-terminated string',
-                    'T_ENDDECLARE'                  => 'enddeclare',
-                    'T_ENDFOR'                      => 'endfor',
-                    'T_ENDFOREACH'                  => 'endforeach',
-                    'T_ENDIF'                       => 'endif',
+                        'T_ENDDECLARE'                  => 'enddeclare',
+                        'T_ENDFOR'                      => 'endfor',
+                        'T_ENDFOREACH'                  => 'endforeach',
+                        'T_ENDIF'                       => 'endif',
                     'T_ENDSWITCH'                   => 'endswitch',
                     'T_ENDWHILE'                    => 'endwhile',
                     'T_EVAL'                        => 'eval',
@@ -343,107 +343,107 @@
                     'T_GLOBAL'                      => 'global',
                     'T_GOTO'                        => 'goto',
                     'T_HALT_COMPILER'               => '__halt_compiler',
-                    'T_IF'                          => 'if',
+                        'T_IF'                          => 'if',
                     'T_IMPLEMENTS'                  => 'implements',
-                    'T_INC'                         => '++ (increment)',
-                    'T_INCLUDE'                     => 'include',
-                    'T_INCLUDE_ONCE'                => 'include_once',
-                    'T_INSTANCEOF'                  => 'instanceof',
-                    'T_INSTEADOF'                   => 'insteadof',
-                    'T_INT_CAST'                    => 'int cast',
-                    'T_INTERFACE'                   => 'interface',
-                    'T_ISSET'                       => 'isset',
-                    'T_IS_EQUAL'                    => "'=='",
-                    'T_IS_GREATER_OR_EQUAL'         => "'>='",
-                    'T_IS_IDENTICAL'                => "'==='",
+                        'T_INC'                         => '++ (increment)',
+                        'T_INCLUDE'                    => 'include',
+                        'T_INCLUDE_ONCE'                =>'include_once',
+                        'T_INSTANCEOF'              => 'instanceof',
+                        'T_INSTEADOF'               => 'insteadof',
+                        'T_INT_CAST'                => 'int cast',
+                        'T_INTERFACE'               => 'interface',
+                        'T_ISSET'                   => 'isset',
+                        'T_IS_EQUAL'                => "'=='",
+                        'T_IS_GREATER_OR_EQUAL'         => "'>='",
+                        'T_IS_IDENTICAL'                => "'==='",
                     'T_IS_NOT_EQUAL'                => "'!=' or '<>'",
                     'T_IS_NOT_IDENTICAL'            => "'!=='",
                     'T_IS_SMALLER_OR_EQUAL'         => "'<='",
                     'T_LINE'                        => '__LINE__',
-                    'T_LIST'                        => 'list',
-                    'T_LNUMBER'                     => 'number',
-                    'T_LOGICAL_AND'                 => "'and'",
-                    'T_LOGICAL_OR'                  => "'or'",
-                    'T_LOGICAL_XOR'                 => "'xor'",
-                    'T_METHOD_C'                    => '__METHOD__',
-                    'T_MINUS_EQUAL'                 => "'-='",
-                    'T_MOD_EQUAL'                   => "'%='",
-                    'T_MUL_EQUAL'                   => "'*='",
-                    'T_NAMESPACE'                   => 'namespace',
-                    'T_NEW'                         => 'new',
-                    'T_NUM_STRING'                  => 'array index in a string',
-                    'T_NS_C'                        => '__NAMESPACE__',
+                     'T_LIST'                        => 'list',
+                        'T_LNUMBER'                     => 'number',
+                        'T_LOGICAL_AND'                 => "'and'",
+                        'T_LOGICAL_OR'                  => "'or'",
+                        'T_LOGICAL_XOR'                 => "'xor'",
+                        'T_METHOD_C'                    => '__METHOD__',
+                        'T_MINUS_EQUAL'                 => "'-='",
+                        'T_MOD_EQUAL'                   => "'%='",
+                        'T_MUL_EQUAL'                   => "'*='",
+                        'T_NAMESPACE'                   => 'namespace',
+                        'T_NEW'                     => 'new',
+                        'T_NUM_STRING'              => 'array index in a string',
+                     'T_NS_C'                        => '__NAMESPACE__',
                     'T_NS_SEPARATOR'                => 'namespace seperator',
-                    'T_OBJECT_CAST'                 => 'object cast',
-                    'T_OBJECT_OPERATOR'             => "'->'",
-                    'T_OLD_FUNCTION'                => 'old_function',
-                    'T_OPEN_TAG'                    => "'<?php' or '<?'",
-                    'T_OPEN_TAG_WITH_ECHO'          => "'<?php echo '",
-                    'T_OR_EQUAL'                    => "'|='",
-                    'T_PAAMAYIM_NEKUDOTAYIM'        => "'::'",
-                    'T_PLUS_EQUAL'                  => "'+='",
-                    'T_PRINT'                       => 'print',
-                    'T_PRIVATE'                     => 'private',
-                    'T_PUBLIC'                      => 'public',
-                    'T_PROTECTED'                   => 'protected',
-                    'T_REQUIRE'                     => 'require',
-                    'T_REQUIRE_ONCE'                => 'require_once',
-                    'T_RETURN'                      => 'return',
-                    'T_SL'                          => "'<<'",
-                    'T_SL_EQUAL'                    => "'<<='",
-                    'T_SR'                          => "'>>'",
-                    'T_SR_EQUAL'                    => "'>>='",
-                    'T_START_HEREDOC'               => "'<<<'",
-                    'T_STATIC'                      => 'static',
-                    'T_STRING'                      => 'string',
-                    'T_STRING_CAST'                 => 'string cast',
+                        'T_OBJECT_CAST'                 => 'objectcast',
+                        'T_OBJECT_OPERATOR'             => "'->'",
+                        'T_OLD_FUNCTION'                => 'old_function',
+                        'T_OPEN_TAG'                    => "'<?php' or '<?'",
+                        'T_OPEN_TAG_WITH_ECHO'      => "'<?php echo '",
+                        'T_OR_EQUAL'                => "'|='",
+                        'T_PAAMAYIM_NEKUDOTAYIM'        => "'::'",
+                        'T_PLUS_EQUAL'              => "'+='",
+                        'T_PRINT'                   => 'print',
+                        'T_PRIVATE'                 => 'private',
+                        'T_PUBLIC'                  => 'public',
+                        'T_PROTECTED'               => 'protected',
+                        'T_REQUIRE'                 => 'require',
+                        'T_REQUIRE_ONCE'            => 'require_once',
+                        'T_RETURN'                  => 'return',
+                        'T_SL'                      => "'<<'",
+                        'T_SL_EQUAL'                => "'<<='",
+                        'T_SR'                      => "'>>'",
+                        'T_SR_EQUAL'                => "'>>='",
+                        'T_START_HEREDOC'           => "'<<<'",
+                        'T_STATIC'                      => 'static',
+                        'T_STRING'                      => 'string',
+                        'T_STRING_CAST'                 => 'string cast',
                     'T_SWITCH'                      => 'switch',
-                    'T_THROW'                       => 'throw',
+                'T_THROW'                       => 'throw',
                     'T_TRY'                         => 'try',
-                    'T_TRAIT'                       => 'trait',
-                    'T_TRAIT_C'                     => '__trait__',
-                    'T_UNSET'                       => 'unset',
-                    'T_UNSET_CAST'                  => 'unset cast',
-                    'T_USE'                         => 'use',
-                    'T_VAR'                         => 'var',
-                    'T_VARIABLE'                    => 'variable',
+                        'T_TRAIT'                       => 'trait',
+                        'T_TRAIT_C'                     => '__trait__',
+                        'T_UNSET'                   => 'unset',
+                        'T_UNSET_CAST'              => 'unset cast',
+                        'T_USE'                 => 'use',
+                        'T_VAR'                         => 'var',
+                        'T_VARIABLE'                    => 'variable',
                     'T_WHILE'                       => 'while',
                     'T_WHITESPACE'                  => 'whitespace',
                     'T_XOR_EQUAL'                   => "'^='",
                     'T_YIELD'                       => 'yield'
-            );
-
+                );
+    
             private static $syntaxMap = array(
-                    'const'                       => 'syntax-literal',
-                    'reference_ampersand'         => 'syntax-function',
-
-                    T_COMMENT                     => 'syntax-comment',
-                    T_DOC_COMMENT                 => 'syntax-comment',
-
-                    T_ABSTRACT                    => 'syntax-keyword',
-                    T_AS                          => 'syntax-keyword',
-                    T_BREAK                       => 'syntax-keyword',
-                    T_CASE                        => 'syntax-keyword',
-                    T_CATCH                       => 'syntax-keyword',
-                    T_CLASS                       => 'syntax-keyword',
-
-                    T_CONST                       => 'syntax-keyword',
-
+                        'const'                   => 'syntax-literal',
+                        'reference_ampersand'         => 'syntax-function',
+    
+                        T_COMMENT                     => 'syntax-comment',
+                        T_DOC_COMMENT                 => 'syntax-comment',
+    
+                      T_ABSTRACT                    => 'syntax-keyword',
+                      T_AS                          => 'syntax-keyword',
+                      T_BREAK                       => 'syntax-keyword',
+                      T_CASE                        => 'syntax-keyword',
+                        T_CATCH                       => 'syntax-keyword',
+                        T_CLASS                       => 'syntax-keyword',
+    
+                      T_CONST                       => 'syntax-keyword',
+    
                     T_CONTINUE                    => 'syntax-keyword',
                     T_DECLARE                     => 'syntax-keyword',
                     T_DEFAULT                     => 'syntax-keyword',
-                    T_DO                          => 'syntax-keyword',
-
+                  T_DO                          => 'syntax-keyword',
+    
                     T_ELSE                        => 'syntax-keyword',
                     T_ELSEIF                      => 'syntax-keyword',
                     T_ENDDECLARE                  => 'syntax-keyword',
                     T_ENDFOR                      => 'syntax-keyword',
-                    T_ENDFOREACH                  => 'syntax-keyword',
-                    T_ENDIF                       => 'syntax-keyword',
-                    T_ENDSWITCH                   => 'syntax-keyword',
-                    T_ENDWHILE                    => 'syntax-keyword',
-                    T_EXTENDS                     => 'syntax-keyword',
-
+                  T_ENDFOREACH                  => 'syntax-keyword',
+                      T_ENDIF                       => 'syntax-keyword',
+                      T_ENDSWITCH                   => 'syntax-keyword',
+                      T_ENDWHILE                    => 'syntax-keyword',
+                      T_EXTENDS                     => 'syntax-keyword',
+    
                     T_FINAL                       => 'syntax-keyword',
                     T_FINALLY                     => 'syntax-keyword',
                     T_FOR                         => 'syntax-keyword',
@@ -451,33 +451,33 @@
                     T_FUNCTION                    => 'syntax-keyword',
                     T_GLOBAL                      => 'syntax-keyword',
                     T_GOTO                        => 'syntax-keyword',
-
+    
                     T_IF                          => 'syntax-keyword',
                     T_IMPLEMENTS                  => 'syntax-keyword',
                     T_INSTANCEOF                  => 'syntax-keyword',
                     T_INSTEADOF                   => 'syntax-keyword',
                     T_INTERFACE                   => 'syntax-keyword',
-
+    
                     T_LOGICAL_AND                 => 'syntax-keyword',
-                    T_LOGICAL_OR                  => 'syntax-keyword',
-                    T_LOGICAL_XOR                 => 'syntax-keyword',
-                    T_NAMESPACE                   => 'syntax-keyword',
-                    T_NEW                         => 'syntax-keyword',
-                    T_PRIVATE                     => 'syntax-keyword',
-                    T_PUBLIC                      => 'syntax-keyword',
-                    T_PROTECTED                   => 'syntax-keyword',
-                    T_RETURN                      => 'syntax-keyword',
-                    T_STATIC                      => 'syntax-keyword',
-                    T_SWITCH                      => 'syntax-keyword',
-                    T_THROW                       => 'syntax-keyword',
+                T_LOGICAL_OR                  => 'syntax-keyword',
+                        T_LOGICAL_XOR                 => 'syntax-keyword',
+                        T_NAMESPACE                   => 'syntax-keyword',
+                        T_NEW                         => 'syntax-keyword',
+                        T_PRIVATE                     => 'syntax-keyword',
+                        T_PUBLIC                      => 'syntax-keyword',
+                        T_PROTECTED                   => 'syntax-keyword',
+                        T_RETURN                      => 'syntax-keyword',
+                        T_STATIC                      => 'syntax-keyword',
+                        T_SWITCH                      => 'syntax-keyword',
+                        T_THROW                       => 'syntax-keyword',
                     T_TRAIT                       => 'syntax-keyword',
                     T_TRY                         => 'syntax-keyword',
-                    T_USE                         => 'syntax-keyword',
+                T_USE                         => 'syntax-keyword',
                     T_VAR                         => 'syntax-keyword',
-                    T_WHILE                       => 'syntax-keyword',
+                        T_WHILE                       => 'syntax-keyword',
                     T_YIELD                       => 'syntax-keyword',
 
-                    // __VAR__ type magic constants
+                        // __VAR__ type magic constants
                     T_CLASS_C                     => 'syntax-literal',
                     T_DIR                         => 'syntax-literal',
                     T_FILE                        => 'syntax-literal',
@@ -505,232 +505,232 @@
                     T_EVAL                        => 'syntax-function',
                     T_EXIT                        => 'syntax-function',
                     T_HALT_COMPILER               => 'syntax-function',
-                    T_INCLUDE                     => 'syntax-function',
-                    T_INCLUDE_ONCE                => 'syntax-function',
+                        T_INCLUDE                     => 'syntax-function',
+                   T_INCLUDE_ONCE                => 'syntax-function',
                     T_ISSET                       => 'syntax-function',
-                    T_LIST                        => 'syntax-function',
-                    T_REQUIRE_ONCE                => 'syntax-function',
-                    T_PRINT                       => 'syntax-function',
-                    T_REQUIRE                     => 'syntax-function',
-                    T_UNSET                       => 'syntax-function'
+                      T_LIST                        => 'syntax-function',
+                        T_REQUIRE_ONCE                => 'syntax-function',
+                T_PRINT                   => 'syntax-function',
+                        T_REQUIRE                     => 'syntax-function',
+                      T_UNSET                       => 'syntax-function'
             );
-
+    
+                /**
+                 * A mapping of PHP errors,
+                 * mapped to descriptions of them.
+                */
+               private static $PHP_ERROR_MAPPINGS = array(
+                	E_ERROR 				=> 'E_ERROR',
+    					E_WARNING 				=> 'E_WARNING',
+    					E_PARSE 				=> 'E_PARSE',
+    					E_NOTICE 				=> 'E_NOTICE',
+    					E_CORE_ERROR 			=> 'E_CORE_ERROR',
+    				E_CORE_WARNING 			=> 'E_CORE_WARNING',
+    					E_COMPILE_ERROR 		=> 'E_COMPILE_ERROR',
+    					E_COMPILE_WARNING 		=> 'E_COMPILE_WARNING',
+    					E_USER_ERROR			=> 'E_USER_ERROR',
+    					E_USER_WARNING 			=> 'E_USER_WARNING',
+    					E_USER_NOTICE 			=> 'E_USER_NOTICE',
+    					E_STRICT 				=> 'E_STRICT',
+    					E_RECOVERABLE_ERROR 	=> 'E_RECOVERABLE_ERROR',
+    				E_DEPRECATED 			=> 'E_DEPRECATED',
+    					E_USER_DEPRECATED 	=> 'E_USER_DEPRECATED',
+    					E_ALL 					=> 'E_ALL'
+    			);
+    
             /**
-             * A mapping of PHP errors,
-             * mapped to descriptions of them.
-             */
-            private static $PHP_ERROR_MAPPINGS = array(
-            		E_ERROR 				=> 'E_ERROR',
-					E_WARNING 				=> 'E_WARNING',
-					E_PARSE 				=> 'E_PARSE',
-					E_NOTICE 				=> 'E_NOTICE',
-					E_CORE_ERROR 			=> 'E_CORE_ERROR',
-					E_CORE_WARNING 			=> 'E_CORE_WARNING',
-					E_COMPILE_ERROR 		=> 'E_COMPILE_ERROR',
-					E_COMPILE_WARNING 		=> 'E_COMPILE_WARNING',
-					E_USER_ERROR			=> 'E_USER_ERROR',
-					E_USER_WARNING 			=> 'E_USER_WARNING',
-					E_USER_NOTICE 			=> 'E_USER_NOTICE',
-					E_STRICT 				=> 'E_STRICT',
-					E_RECOVERABLE_ERROR 	=> 'E_RECOVERABLE_ERROR',
-					E_DEPRECATED 			=> 'E_DEPRECATED',
-					E_USER_DEPRECATED 		=> 'E_USER_DEPRECATED',
-					E_ALL 					=> 'E_ALL'
-			);
-
-            /**
-             * A list of methods which are known to call the autoloader,
-             * but should not error, if the class is not found.
+                 * A list of methods which are known to call the autoloader,
+             * but shouldnot error, if theclass is not found.
              *
-             * They are allowed to fail, so we don't store a class not
-             * found exception if they do.
+                 * They are allowed to fail, so we don't store a class not
+                 * found exception if they do.
              */
-            private static $SAFE_AUTOLOADER_FUNCTIONS = array(
-                    'class_exists',
-                    'interface_exists',
-                    'method_exists',
+                private static $SAFE_AUTOLOADER_FUNCTIONS = array(
+                        'class_exists',
+                        'interface_exists',
+                        'method_exists',
                     'property_exists',
-                    'is_subclass_of'
+                        'is_subclass_of'
             );
-
-            /**
-             * When returning values, if a mime type is set,
-             * then PHP Error should only output if the mime type
-             * is one of these.
-             */
-            private static $ALLOWED_RETURN_MIME_TYPES = array(
-                    'text/html',
+    
+                /**
+                 * When returning values, if a mime type is set,
+                 * then PHP Error should only output if the mime type
+                 * is one of these.
+                 */
+                private static $ALLOWED_RETURN_MIME_TYPES = array(
+                       'text/html',
                     'application/xhtml+xml'
-            );
-
+                );
+    
             private static function isIIS() {
-                return (
+                    return (
                                 isset($_SERVER['SERVER_SOFTWARE']) &&
-                                strpos($_SERVER['SERVER_SOFTWARE'], 'IIS/') !== false
-                        ) || (
+                            strpos($_SERVER['SERVER_SOFTWARE'], 'IIS/') !== false
+                            ) || (
                                 isset($_SERVER['_FCGI_X_PIPE_']) &&
-                                strpos($_SERVER['_FCGI_X_PIPE_'], 'IISFCGI') !== false
+                                    strpos($_SERVER['_FCGI_X_PIPE_'], 'IISFCGI') !== false
                         );
-            }
-
-            private static function isBinaryRequest() {
-                $response = ErrorHandler::getResponseHeaders();
-
-                foreach ( $response as $key => $value ) {
-                    if ( strtolower($key) === 'content-transfer-encoding' ) {
-                        return strtolower($value) === 'binary';
-                    }
                 }
-            }
-
-            /**
-             * This attempts to state if this is *not* a PHP request,
-             * but it cannot say if it *is* a PHP request. It achieves
-             * this by looking for a mime type.
+    
+                private static function isBinaryRequest() {
+                    $response= ErrorHandler::getResponseHeaders();
+  
+                    foreach ( $response as $key =>$value ) {
+                      if ( strtolower($key)=== 'content-transfer-encoding' ) {
+                            return strtolower($value) === 'binary';
+                        }
+                }
+                }
+    
+                /**
+                 * This attempts to state if thisis *not* a PHP request,
+                 * but it cannot say if it *is* a PHP request. It achieves
+                 * this by looking for a mime type.
              *
-             * For example if the mime type is JavaScript, then we
-             * know it's not PHP. However there is no "yes, this is
-             * definitely a normal HTML response" flag we can check.
-             */
-            private static function isNonPHPRequest() {
-                /*
-                 * Check if we are a mime type that isn't allowed.
+                 * For example if the mime type is JavaScript, then we
+                 * know it's not PHP. However there is no "yes,this is
+             * definitely anormal HTML response" flag we can check.
+                 */
+                private static function isNonPHPRequest() {
+                    /*
+                     * Check if we are a mime type that isn't allowed.
                  * 
-                 * If an allowed type is found, then we return false,
-                 * as were are a PHP Request.
+                     * If an allowed type is found, then we return false,
+                     * as were are a PHP Request.
                  *
                  * Anything else found, returns true, as that means
                  * we are dealing with something unknown.
                  */
-                $response = ErrorHandler::getResponseHeaders();
-
-                foreach ( $response as $key => $value ) {
-                    if ( strtolower($key) === 'content-type' ) {
-                        foreach ( ErrorHandler::$ALLOWED_RETURN_MIME_TYPES as $type ) {
-                            if ( stripos($value, $type) !== false ) {
+                    $response = ErrorHandler::getResponseHeaders();
+    
+                    foreach ( $response as $key => $value ) {
+                     if ( strtolower($key) === 'content-type' ){
+                            foreach ( ErrorHandler::$ALLOWED_RETURN_MIME_TYPES as $type ) {
+                        if ( stripos($value, $type) !== false ) {
                                 return false;
-                            }
                         }
-
-                        return true;
-                    }
+                        }
+    
+                            return true;
+                        }
                 }
-
-                return false;
-            }
-
+    
+                   return false;
+                }
+    
             /**
-             * Looks up a description for the symbol given,
-             * and if found, it is returned.
+                 * Looks up a description for the symbol given,
+                 * and if found, it is returned.
              *
-             * If it's not found, then the symbol given is returned.
-             */
-            private static function phpSymbolToDescription( $symbol ) {
-                if ( isset(ErrorHandler::$PHP_SYMBOL_MAPPINGS[$symbol]) ) {
-                    return ErrorHandler::$PHP_SYMBOL_MAPPINGS[$symbol];
-                } else {
+                 * If it's not found, then the symbol given is returned.
+                 */
+                private static function phpSymbolToDescription( $symbol ) {
+                    if ( isset(ErrorHandler::$PHP_SYMBOL_MAPPINGS[$symbol]) ) {
+                     return ErrorHandler::$PHP_SYMBOL_MAPPINGS[$symbol];
+                    } else {
                     return "'$symbol'";
                 }
-            }
-
-            /**
-             * Attempts to syntax highlight the code snippet done.
+                }
+    
+             /**
+                 * Attempts to syntax highlight the code snippet done.
              *
-             * This is then returned as HTML, ready to be dumped to the screen.
+                 * This is then returned as HTML, ready to be dumped to the screen.
              *
-             * @param code An array of code lines to syntax highlight.
-             * @return HTML version of the code given, syntax highlighted.
-             */
-            private static function syntaxHighlight( $code ) {
-                $syntaxMap = ErrorHandler::$syntaxMap;
-
-                // @supress invalid code raises a warning
+                 * @param code An array of code lines to syntax highlight.
+                * @return HTML version of the code given, syntax highlighted.
+                 */
+                private static function syntaxHighlight( $code ) {
+                    $syntaxMap =ErrorHandler::$syntaxMap;
+    
+                    // @supress invalid code raises a warning
                 $tokens = @token_get_all( "<?php " . $code . " ?" . ">" );
-                $html = array();
-                $len = count($tokens)-1;
-                $inString = false;
-                $stringBuff = null;
+                 $html = array();
+            $len = count($tokens)-1;
+                    $inString = false;
+                    $stringBuff = null;
                 $skip = false;
-
+    
                 for ( $i = 1; $i < $len; $i++ ) {
-                    $token = $tokens[$i];
-
-                    if ( is_array($token) ) {
-                        $type = $token[0];
-                        $code = $token[1];
+                        $token = $tokens[$i];
+    
+                if ( is_array($token) ) {
+                            $type = $token[0];
+                            $code = $token[1];
                     } else {
                         $type = null;
-                        $code = $token;
-                    }
-
-                    // work out any whitespace padding
-                    if ( strpos($code, "\n") !== false && trim($code) === '' ) {
-                        if ( $inString ) {
-                            $html[]= "<span class='syntax-string'>" . join('', $stringBuff);
-                            $stringBuff = array();
+                          $code = $token;
                         }
-                    } else if ( $code === '&' ) {
-                        if ( $i < $len ) {
+    
+                        // work out any whitespace padding
+                        if ( strpos($code, "\n") !== false && trim($code) === '' ) {
+                            if ( $inString ) {
+                                $html[]= "<span class='syntax-string'>" . join('', $stringBuff);
+                                $stringBuff = array();
+                        }
+                        } else if ( $code === '&' ) {
+                            if ( $i < $len ) {
                             $next = $tokens[$i+1];
-
-                            if ( is_array($next) && $next[0] === T_VARIABLE ) {
+    
+                                if ( is_array($next) && $next[0] === T_VARIABLE ) {
                                 $type = 'reference_ampersand';
                             }
-                        }
+                            }
                     } else if ( $code === '"' || $code === "'" ) {
                         if ( $inString ) {
-                            $html[]= "<span class='syntax-string'>" . join('', $stringBuff) . htmlspecialchars($code) . "</span>";
+                                $html[]= "<span class='syntax-string'>" . join('', $stringBuff) .htmlspecialchars($code) . "</span>";
                             $stringBuff = null;
-                            $skip = true;
+                                $skip = true;
                         } else {
-                            $stringBuff = array();
+                                $stringBuff = array();
                         }
-
-                        $inString = !$inString;
+    
+                            $inString = !$inString;
                     } else if ( $type === T_STRING ) {
-                        $matches = array();
-                        preg_match(ErrorHandler::REGEX_PHP_CONST_IDENTIFIER, $code, $matches);
-
+                           $matches = array();
+                    preg_match(ErrorHandler::REGEX_PHP_CONST_IDENTIFIER, $code, $matches);
+    
                         if ( $matches && strlen($matches[0]) === strlen($code) ) {
                             $type = 'const';
                         }
-                    }
-
-                    if ( $skip ) {
-                        $skip = false;
-                    } else {
+                }
+    
+                        if ( $skip ){
+                            $skip = false;
+                        } else {
                         $code = htmlspecialchars( $code );
-
-                        if ( $type !== null && isset($syntaxMap[$type]) ) {
-                            $class = $syntaxMap[$type];
-
-                            if ( $type === T_CONSTANT_ENCAPSED_STRING && strpos($code, "\n") !== false ) {
-                                $append = "<span class='$class'>" .
-                                            join(
-                                                    "</span>\n<span class='$class'>",
-                                                    explode( "\n", $code )
+   
+                     if ( $type !== null && isset($syntaxMap[$type]) ) {
+                        $class = $syntaxMap[$type];
+    
+                                if ( $type === T_CONSTANT_ENCAPSED_STRING && strpos($code, "\n") !== false ) {
+                            $append = "<span class='$class'>" .
+                                                join(
+                                                "</span>\n<span class='$class'>",
+                                                        explode( "\n", $code )
                                             ) .
                                         "</span>" ;
                             } else if ( strrpos($code, "\n") === strlen($code)-1 ) {
-                                $append = "<span class='$class'>" . substr($code, 0, strlen($code)-1) . "</span>\n";
-                            } else {
-                                $append = "<span class='$class'>$code</span>";
+                                $append = "<span class='$class'>" . substr($code, 0,strlen($code)-1) . "</span>\n";
+                               } else {
+                                    $append = "<span class='$class'>$code</span>";
                             }
                         } else if ( $inString && $code !== '"' ) {
-                            $append = "<span class='syntax-string'>$code</span>";
-                        } else {
-                            $append = $code;
-                        }
-
-                        if ( $inString ) {
-                            $stringBuff[]= $append;
+                                $append = "<span class='syntax-string'>$code</span>";
+                            } else {
+                                $append = $code;
+                            }
+   
+                            if ( $inString ) {
+                           $stringBuff[]= $append;
                         } else {
                             $html[]= $append;
                         }
-                    }
                 }
-
-                if ( $stringBuff !== null ) {
+                    }
+    
+                    if ( $stringBuff !== null ) {
                     $html[]= "<span class='syntax-string'>" . join('', $stringBuff) . '</span>';
                     $stringBuff = null;
                 }
@@ -775,226 +775,226 @@
 
             private static function newArgument( $name, $type=false, $isPassedByReference=false, $isOptional=false, $optionalValue=null, $highlight=false ) {
                 if ( $name instanceof ReflectionParameter ) {
-                    $highlight = func_num_args() > 1 ?
-                            $highlight = $type :
+                        $highlight = func_num_args() > 1 ?
+                                $highlight = $type :
                             false;
-
-                    $klass = $name->getDeclaringClass();
-                    $functionName = $name->getDeclaringFunction()->name;
-                    if ( $klass !== null ) {
-                        $klass = $klass->name;
+    
+                        $klass = $name->getDeclaringClass();
+                $functionName = $name->getDeclaringFunction()->name;
+                        if ( $klass !== null ) {
+                            $klass = $klass->name;
                     }
-
-                    $export = ReflectionParameter::export(
+    
+                        $export = ReflectionParameter::export(
                             ( $klass ?
-                                    array( "\\$klass", $functionName ) :
+                                        array( "\\$klass", $functionName ) :
                                     $functionName ),
-                            $name->name,
-                            true
-                    );
-
-                    $paramType = preg_replace('/.*?(\w+)\s+\$'.$name->name.'.*/', '\\1', $export);
-                    if ( strpos($paramType, '[') !== false || strlen($paramType) === 0 ) {
-                        $paramType = null;
+                                $name->name,
+                        true
+                        );
+    
+                        $paramType = preg_replace('/.*?(\w+)\s+\$'.$name->name.'.*/', '\\1', $export);
+                        if ( strpos($paramType, '[') !== false || strlen($paramType) === 0 ) {
+                            $paramType = null;
                     }
-
-                    return ErrorHandler::newArgument(
-                            $name->name,
+    
+                        return ErrorHandler::newArgument(
+                                $name->name,
                             $paramType,
                             $name->isPassedByReference(),
-                            $name->isDefaultValueAvailable(),
-                            ( $name->isDefaultValueAvailable() ?
+                                $name->isDefaultValueAvailable(),
+                        ( $name->isDefaultValueAvailable() ?
                                     var_export( $name->getDefaultValue(), true ) :
-                                    null ),
+                                        null ),
                             ( func_num_args() > 1 ?
                                     $type :
                                     false )
-                    );
-                } else {
+                );
+                    } else {
                     return array(
-                            'name'              => $name,
+                                'name'              => $name,
                             'has_type'          => ( $type !== false ),
-                            'type'              => $type,
+                                'type'              => $type,
                             'is_reference'      => $isPassedByReference,
-                            'has_default'       => $isOptional,
-                            'default_val'       => $optionalValue,
-                            'is_highlighted'    => $highlight
-                    );
-                }
-            }
-
-            private static function syntaxHighlightFunctionMatch( $match, &$stackTrace, $highlightArg=null, &$numHighlighted=0 ) {
-                list( $className, $type, $functionName ) = ErrorHandler::splitFunction( $match );
-
-                // is class::method()
-                if ( $className !== null ) {
-                    $reflectFun = new ReflectionMethod( $className, $functionName );
+                            'has_default'   => $isOptional,
+                                'default_val'       => $optionalValue,
+                            'is_highlighted'   => $highlight
+                );
+                  }
+              }
+ 
+                private static function syntaxHighlightFunctionMatch( $match, &$stackTrace, $highlightArg=null, &$numHighlighted=0 ) {
+                    list( $className, $type, $functionName ) = ErrorHandler::splitFunction( $match );
+    
+                    // is class::method()
+                    if ( $className !== null ) {
+                        $reflectFun = new ReflectionMethod( $className,$functionName );
                 // is a function
-                } else if ( $functionName === '{closure}' ) {
+                    } else if ( $functionName === '{closure}' ) {
                     return '<span class="syntax-variable">$closure</span>';
-                } else {
-                    $reflectFun = new ReflectionFunction( $functionName );
-                }
-
-                if ( $reflectFun ) {
+                    } else {
+                    $reflectFun =new ReflectionFunction( $functionName );
+                    }
+    
+                    if ( $reflectFun ) {
                     $params = $reflectFun->getParameters();
-
-                    if ( $params ) {
-                        $args = array();
-                        $min = 0;
-                        foreach( $params as $i => $param ) {
-                            $arg = ErrorHandler::newArgument( $param );
-
-                            if ( ! $arg['has_default'] ) {
+    
+                        if ( $params ) {
+                    $args = array();
+                            $min = 0;
+                        foreach( $params as $i=> $param ) {
+                                $arg = ErrorHandler::newArgument( $param );
+    
+                                if ( ! $arg['has_default'] ) {
                                 $min = $i;
+                         }
+    
+                                $args[]= $arg;
                             }
-
-                            $args[]= $arg;
-                        }
-
-                        if ( $highlightArg !== null ) {
-                            for ( $i = $highlightArg; $i <= $min; $i++ ) {
+    
+                        if ( $highlightArg !== null) {
+                          for ( $i = $highlightArg; $i <= $min; $i++ ) {
                                 $args[$i]['is_highlighted'] = true;
                             }
-
-                            $numHighlighted = $min-$highlightArg;
-                        }
-
-                        if ( $className !== null ) {
-                            if ( $stackTrace && isset($stackTrace[1]) && isset($stackTrace[1]['type']) ) {
-                                $type = htmlspecialchars( $stackTrace[1]['type'] );
+    
+                                $numHighlighted = $min-$highlightArg;
                             }
-                        } else {
-                            $type = null;
-                        }
 
+                        if ( $className !== null) {
+                                if ( $stackTrace && isset($stackTrace[1]) && isset($stackTrace[1]['type']) ) {
+                            $type = htmlspecialchars( $stackTrace[1]['type'] );
+                                }
+                            } else {
+                            $type =null;
+                            }
+    
                         return ErrorHandler::syntaxHighlightFunction( $className, $type, $functionName, $args );
-                    }
+                        }
                 }
-
-                return null;
+    
+                    return null;
             }
-
-            /**
-             * Returns the values given, as HTML, syntax highlighted.
-             * It's a shorter, slightly faster, more no-nonsense approach
+    
+                /**
+         * Returns the values given, as HTML, syntax highlighted.
+                 * It's a shorter, slightly faster, more no-nonsense approach
              * then 'syntaxHighlight'.
-             *
-             * This is for syntax highlighting:
-             *  - fun( [args] )
-             *  - class->fun( [args] )
+         *
+                 * This is for syntax highlighting:
+                 *  - fun( [args] )
+                 *  - class->fun( [args] )
              *  - class::fun( [args] )
-             *
-             * Class and type can be null, to denote no class, but are not optional.
-             */
-            private static function syntaxHighlightFunction( $class, $type, $fun, &$args=null ) {
+                 *
+                 * Class and type can be null, to denote no class, but are not optional.
+          */
+                private static function syntaxHighlightFunction( $class, $type, $fun, &$args=null ) {
                 $info = array();
 
-                // set the info
-                if ( isset($class) && $class && isset($type) && $type ) {
-                    if ( $type === '->' ) {
+                    // set the info
+                if ( isset($class) && $class && isset($type) &&$type ) {
+                       if ( $type === '->' ) {
                         $type = '-&gt;';
-                    }
-
-                    $info []= "<span class='syntax-class'>$class</span>$type";
-                }
-
-                if ( isset($fun) && $fun ) {
-                    $info []= "<span class='syntax-function'>$fun</span>";
-                }
-
-                if ( $args ) {
-                    $info []= '( ';
-
-                    foreach ($args as $i => $arg) {
-                        if ( $i > 0 ) {
-                            $info[]= ', ';
                         }
-
-                        if ( is_string($arg) ) {
-                            $info[]= $arg;
-                        } else {
+    
+                    $info[]= "<span class='syntax-class'>$class</span>$type";
+            }
+    
+                    if ( isset($fun) && $fun ) {
+                $info []= "<span class='syntax-function'>$fun</span>";
+                    }
+    
+                    if ( $args ) {
+                    $info []= '( ';
+    
+                        foreach ($args as $i => $arg) {
+                        if ( $i > 0 ) {
+                                $info[]= ', ';
+                        }
+    
+                            if ( is_string($arg) ) {
+                                $info[]= $arg;
+                            } else {
                             $highlight = $arg['is_highlighted'];
                             $name = $arg['name'];
-
-                            if ( $highlight ) {
-                                $info[]= '<span class="syntax-higlight-variable">';
+    
+                                if ( $highlight ) {
+                                    $info[]='<span class="syntax-higlight-variable">';
                             }
-
-                            if ( $name === '_' ) {
-                                $info[]= '<span class="syntax-variable-not-important">';
+    
+                                if ( $name === '_' ) {
+                            $info[]= '<spanclass="syntax-variable-not-important">';
                             }
-
-                            if ( $arg['has_type'] ) {
-                                $info []= "<span class='syntax-class'>";
-                                    $info []= $arg['type'];
+    
+                                if ( $arg['has_type'] ) {
+                                    $info []= "<span class='syntax-class'>";
+                                        $info []= $arg['type'];
                                 $info []= '</span> ';
-                            }
-
+                                }
+    
                             if ( $arg['is_reference'] ) {
                                 $info []= '<span class="syntax-function">&amp;</span>';
-                            }
-
-                            $info []= "<span class='syntax-variable'>\$$name</span>";
-
-                            if ( $arg['has_default'] ) {
-                                $info []= '=<span class="syntax-literal">' . $arg['default_val'] . '</span>';
-                            }
-
-                            if ( $name === '_' ) {
-                                $info[]= '</span>';
-                            }
-                            if ( $highlight ) {
-                                $info[]= '</span>';
-                            }
                         }
+    
+                                $info []= "<span class='syntax-variable'>\$$name</span>";
+    
+                        if ( $arg['has_default'] ) {
+                            $info []= '=<span class="syntax-literal">' . $arg['default_val'] . '</span>';
+                            }
+    
+                                if ( $name ==='_' ) {
+                                    $info[]= '</span>';
+                                }
+                            if ( $highlight ) {
+                                    $info[]= '</span>';
+                                }
+                            }
                     }
-
-                    $info []= ' )';
+    
+                        $info []= ' )';
                 } else {
-                    $info []= '()';
-                }
-
+                        $info []= '()';
+                    }
+    
                 return join( '', $info );
-            }
-
+                }
+    
             /**
-             * Checks if the item is in options, and if it is, then it is removed and returned.
+                 * Checks if the item is in options, and if it is, then it is removed and returned.
              *
-             * If it is not found, or if options is not an array, then the alt is returned.
-             */
-            private static function optionsPop( &$options, $key, $alt=null ) {
-                if ( $options && isset($options[$key]) ) {
-                    $val = $options[$key];
-                    unset( $options[$key] );
-
-                    return $val;
-                } else {
-                    $iniAlt = @get_cfg_var( ErrorHandler::PHP_ERROR_INI_PREFIX . '.' . $key );
-
-                    if ( $iniAlt !== false ) {
-                        return $iniAlt;
-                    } else {
+              * If it is not found, or if options is not an array, then the alt is returned.
+              */
+                private static function optionsPop( &$options, $key, $alt=null ) {
+                    if ( $options && isset($options[$key]) ) {
+                        $val = $options[$key];
+                        unset( $options[$key] );
+    
+                     return $val;
+                    }else{
+                        $iniAlt = @get_cfg_var( ErrorHandler::PHP_ERROR_INI_PREFIX . '.' . $key );
+    
+                        if ( $iniAlt !== false ) {
+                            return $iniAlt;
+                        } else {
                         return $alt;
                     }
+                    }
                 }
-            }
 
-            private static function folderTypeToCSS( $type ) {
-                if ( $type === ErrorHandler::FILE_TYPE_ROOT ) {
-                    return 'file-root';
-                } else if ( $type === ErrorHandler::FILE_TYPE_IGNORE ) {
-                    return 'file-ignore';
-                } else if ( $type === ErrorHandler::FILE_TYPE_APPLICATION ) {
-                    return 'file-app';
-                } else {
-                    return 'file-common';
+                private static function folderTypeToCSS( $type ) {
+                    if ( $type === ErrorHandler::FILE_TYPE_ROOT ) {
+                        return 'file-root';
+                    } else if ( $type === ErrorHandler::FILE_TYPE_IGNORE ) {
+                return 'file-ignore';
+                    } else if ( $type === ErrorHandler::FILE_TYPE_APPLICATION ) {
+                return 'file-app';
+                    } else {
+                        return 'file-common';
+                    }
                 }
-            }
-
+    
             private static function isFolderType( &$folders, $longest, $file ) {
                 $parts = explode( '/', $file );
-
+    
                 $len = min( count($parts), $longest );
 
                 for ( $i = $len; $i > 0; $i-- ) {
@@ -1051,186 +1051,186 @@
                 $count  = count( $parts );
 
                 $newLongest = max( $newLongest, $count );
-
+    
                 if ( isset($newFolders[$count]) ) {
-                    $folds = &$newFolders[$count];
+                        $folds = &$newFolders[$count];
                     $folds[]= $parts;
-                } else {
-                    $newFolders[$count] = array( $parts );
+                    } else {
+                        $newFolders[$count] = array( $parts );
                 }
-            }
-
-            private static function getRequestHeaders() {
-                if ( function_exists('getallheaders') ) {
+                }
+    
+                private static function getRequestHeaders() {
+                    if ( function_exists('getallheaders') ) {
                     return getallheaders();
-                } else {
-                    $headers = array();
-
-                    foreach ( $_SERVER as $key => $value ) {
-                        if ( strpos($key, 'HTTP_') === 0 ) {
-                            $key = str_replace( " ", "-", ucwords(strtolower( str_replace("_", " ", substr($key, 5)) )) );
-                            $headers[ $key ] = $value;
-                        }
+                  } else {
+                        $headers = array();
+    
+                        foreach ( $_SERVER as $key => $value ) {
+                            if ( strpos($key, 'HTTP_') === 0 ) {
+                            $key =str_replace( " ", "-", ucwords(strtolower( str_replace("_", " ", substr($key, 5)) )) );
+                           $headers[ $key ] = $value;
                     }
-
+                     }
+    
+                        return $headers;
+                    }
+            }
+    
+                private static function getResponseHeaders() {
+            $headers = function_exists('apache_response_headers') ?
+                            apache_response_headers() :
+                            array() ;
+    
+                /*
+                     * Merge the headers_list into apache_response_headers.
+                 *
+                     * This is because sometimes things are in one, which are
+                 * not present in theother.
+                     */
+            if ( function_exists('headers_list') ){
+                        $hList = headers_list();
+    
+                        foreach ($hList as $header) {
+                         $header = explode(":", $header);
+                        $headers[ array_shift($header) ] = trim( implode(":", $header) );
+                        }
+                }
+    
                     return $headers;
                 }
-            }
-
-            private static function getResponseHeaders() {
-                $headers = function_exists('apache_response_headers') ?
-                        apache_response_headers() :
-                        array() ;
-
-                /*
-                 * Merge the headers_list into apache_response_headers.
-                 *
-                 * This is because sometimes things are in one, which are
-                 * not present in the other.
-                 */
-                if ( function_exists('headers_list') ) {
-                    $hList = headers_list();
-
-                    foreach ($hList as $header) {
-                        $header = explode(":", $header);
-                        $headers[ array_shift($header) ] = trim( implode(":", $header) );
-                    }
-                }
-
-                return $headers;
-            }
-
-            public static function identifyTypeHTML( $arg, $recurseLevels=1 ) {
-                if ( ! is_array($arg) && !is_object($arg) ) {
-                    if ( is_string($arg) ) {
-                        return "<span class='syntax-string'>&quot;" . htmlentities($arg) . "&quot;</span>";
-                    } else {
-                        return "<span class='syntax-literal'>" . var_export( $arg, true ) . '</span>';
-                    }
-                } else if ( is_array($arg) ) {
-                    if ( count($arg) === 0 ) {
-                        return "[]";
-                    } else if ( $recurseLevels > 0 ) {
-                        $argArr = array();
-
+    
+        public static function identifyTypeHTML( $arg, $recurseLevels=1 ) {
+            if ( ! is_array($arg) && !is_object($arg) ) {
+                   if ( is_string($arg) ) {
+                    return "<span class='syntax-string'>&quot;" . htmlentities($arg) . "&quot;</span>";
+                        } else {
+                           return "<span class='syntax-literal'>" . var_export( $arg, true ) . '</span>';
+                       }
+                    } else if ( is_array($arg) ) {
+                        if ( count($arg) === 0 ){
+                            return "[]";
+                        } else if ( $recurseLevels > 0 ) {
+                            $argArr = array();
+   
                         foreach ($arg as $ag) {
                             $argArr[]= ErrorHandler::identifyTypeHTML( $ag, $recurseLevels-1 );
                         }
-
+    
                         if ( ($recurseLevels % 2) === 0 ) {
-                            return "["  . join(', ', $argArr) .  "]";
+                                return "["  . join(', ', $argArr) .  "]";
+                            } else {
+                                return "[ " . join(', ', $argArr) . " ]";
+                            }
                         } else {
-                            return "[ " . join(', ', $argArr) . " ]";
+                            return "[...]";
                         }
-                    } else {
-                        return "[...]";
-                    }
                 } else if ( get_class($arg) === 'Closure' ) {
-                    return '<span class="syntax-variable">$Closure</span>()';
-                } else {
-                    $argKlass = get_class( $arg );
-
-                    if ( preg_match(ErrorHandler::REGEX_PHP_CONST_IDENTIFIER, $argKlass) ) {
-                        return '<span class="syntax-literal">$' . $argKlass . '</span>';
-                    } else {
-                        return '<span class="syntax-variable">$' . $argKlass . '</span>';
+                        return '<span class="syntax-variable">$Closure</span>()';
+                  } else {
+                        $argKlass =get_class( $arg );
+    
+                        if ( preg_match(ErrorHandler::REGEX_PHP_CONST_IDENTIFIER, $argKlass) ) {
+                            return '<span class="syntax-literal">$' . $argKlass . '</span>';
+                   } else {
+                            return '<span class="syntax-variable">$' . $argKlass . '</span>';
+                        }
                     }
                 }
-            }
-
-            private $saveUrl;
-            private $isSavingEnabled;
-
-            private $cachedFiles;
-
-            private $isShutdownRegistered;
-            private $isOn;
-
-            private $ignoreFolders = array();
-            private $ignoreFoldersLongest = 0;
-
-            private $applicationFolders = array();
-            private $applicationFoldersLongest = 0;
-
-            private $defaultErrorReportingOn;
-            private $defaultErrorReportingOff;
-            private $applicationRoot;
-            private $serverName;
-            private $showErrorCode;
-
-            private $catchClassNotFound;
-            private $catchSurpressedErrors;
+    
+               private $saveUrl;
+                private $isSavingEnabled;
+    
+                private $cachedFiles;
+   
+                private $isShutdownRegistered;
+                private $isOn;
+    
+                private $ignoreFolders = array();
+             private $ignoreFoldersLongest = 0;
+    
+                private $applicationFolders = array();
+                private $applicationFoldersLongest = 0;
+    
+                private $defaultErrorReportingOn;
+                private $defaultErrorReportingOff;
+                private $applicationRoot;
+                private $serverName;
+              private $showErrorCode;
+    
+                private $catchClassNotFound;
+                private $catchSurpressedErrors;
             private $catchAjaxErrors;
-
-            private $backgroundText;
-            private $numLines;
-
-            private $displayLineNumber;
-            private $htmlOnly;
-
-            private $isBufferSetup;
-            private $bufferOutputStr;
-            private $bufferOutput;
-
-            private $isAjax;
-
-            private $lastGlobalErrorHandler;
-
-            private $classNotFoundException;
-
-            /**
-             * = Options =
-             *
-             * All options are optional, and so is passing in an options item.
-             * You don't have to supply any, it's up to you.
-             *
-             * Note that if 'php_error.force_disable' is true, then this object
+    
+                private $backgroundText;
+                private $numLines;
+ 
+                private $displayLineNumber;
+                private $htmlOnly;
+    
+                private $isBufferSetup;
+                private $bufferOutputStr;
+                private $bufferOutput;
+    
+                private $isAjax;
+    
+                private $lastGlobalErrorHandler;
+    
+                private $classNotFoundException;
+   
+                /**
+                 * = Options =
+                 *
+                 * All options are optional, and so is passing in an options item.
+                 * You don't have to supply any, it's up to you.
+                 *
+                 * Notethat if 'php_error.force_disable' is true, then this object
              * will try to look like it works, but won't actually do anything.
-             *
-             * All options can also be passed in from 'php.ini'. You do this
-             * by setting it with 'php_error.' prefix. For example:
-             *
+                 *
+                 * All options can also be passed in from 'php.ini'. You do this
+                 * by setting it with 'php_error.' prefix. For example:
+                 *
              *      php_error.catch_ajax_errors = On
-             *      php_error.error_reporting_on = E_ALL | E_STRICT
+                 *      php_error.error_reporting_on = E_ALL | E_STRICT
              *
-             * Includes:
-             *  = Types of errors this will catch =
+                 * Includes:
+                 *  = Types of errors this will catch =
              *  - catch_ajax_errors         When on, this will inject JS Ajax wrapping code, to allow this to catch any future JSON errors. Defaults to true.
-             *  - catch_supressed_errors    The @ supresses errors. If set to true, then they are still reported anyway, but respected when false. Defaults to false.
-             *  - catch_class_not_found     When true, loading a class that does not exist will be caught. This defaults to true.
-             *
-             *  = Error reporting level =
-             *  - error_reporting_on        value for when errors are on, defaults to all errors
+                 *  - catch_supressed_errors    The @ supresses errors. If set to true, then they are still reported anyway, but respected when false. Defaults to false.
+             *  - catch_class_not_found     When true, loading a class that does notexist will be caught. This defaults to true.
+                 *
+                 *  = Error reporting level =
+                 *  - error_reporting_on        value for when errors are on, defaults to all errors
              *  - error_reporting_off       value for when errors are off, defaults to php.ini's error_reporting.
-             *
-             *  = Setup Details =
-             *  - application_root          When it's working out the stack trace, this is the root folder of the application, to use as it's base.
-             *                              Defaults to the servers root directory.
-             *
-             *                              A relative path can be given, but lets be honest, an explicit path is the way to guarantee that you
-             *                              will get the path you want. My relative might not be the same as your relative.
-             *
-             *  - snippet_num_lines         The number of lines to display in the code snippet.
-             *                              That includes the line being reported.
+                 *
+                 *  = Setup Details =
+                 *  - application_root          When it's working out the stacktrace, this is the root folder of the application, to use as it's base.
+                 *                              Defaults to the servers root directory.
+                 *
+                 *                            A relative path can be given, but lets be honest, an explicit path is the way to guarantee that you
+                 *                          will get the path you want. My relative might not be the same as your relative.
+                 *
+                *  - snippet_num_lines         The number of lines to display in the code snippet.
+             *                          That includes the line being reported.
              *
              *  - server_name               The name for this server, defaults to "$_SERVER['SERVER_NAME']"
+         *
+                 *  - ignore_folders            This is allows you to highlight non-framework code in a stack trace.
+             *                             An array of folders toignore, when working out the stack trace.
+                 *                          This is folder prefixes in relation to the application_root, whatever that might be.
+                 *                              They are onlyignored if there is a file found outside of them.
+                 *                              If you still don't getwhatthis does, don't worry, it's here cos I use it.
              *
-             *  - ignore_folders            This is allows you to highlight non-framework code in a stack trace.
-             *                              An array of folders to ignore, when working out the stack trace.
-             *                              This is folder prefixes in relation to the application_root, whatever that might be.
-             *                              They are only ignored if there is a file found outside of them.
-             *                              If you still don't get what this does, don't worry, it's here cos I use it.
-             *
-             *  - application_folders       Just like ignore, but anything found in these folders takes precedence
+                 *  - application_folders       Just like ignore, but anything found in these folders takes precedence
              *                              over anything else.
-             *
-             *  - background_text           The text that appeares in the background. By default this is blank.
-             *                              Why? You can replace this with the name of your framework, for extra customization spice.
-             *
-             *  - html_only                 By default, PHP Error only runs on ajax and HTML pages.
-             *                              If this is false, then it will also run when on non-HTML
-             *                              pages too, such as replying with images of JavaScript
-             *                              from your PHP. Defaults to true.
+                 *
+                 *  - background_text           The text that appeares in the background. By default this is blank.
+         *                              Why? You can replace this with the name of your framework, for extra customization spice.
+                 *
+                 *  - html_only                 By default, PHP Error only runs on ajax and HTML pages.
+                 *                              If this is false, then it will also run when on non-HTML
+                 *                          pages too, such as replying with images of JavaScript
+                 *                              from your PHP. Defaults totrue.
              *
              *  - file_link                 When true, files are linked to from the CSS Stack trace, allowing you to open them.
              *                              Defaults to true.
@@ -1282,197 +1282,197 @@
                 $this->defaultErrorReportingOff = ErrorHandler::optionsPop( $options, 'error_reporting_off' , error_reporting()         );
 
                 $this->applicationRoot          = ErrorHandler::optionsPop( $options, 'application_root'    , $_SERVER['DOCUMENT_ROOT'] );
-                $this->serverName               = ErrorHandler::optionsPop( $options, 'server_name'         , $_SERVER['SERVER_NAME']   );
-                $this->showErrorCode            = ErrorHandler::optionsPop( $options, 'show_error_code'         , false);
-
+                    $this->serverName         = ErrorHandler::optionsPop( $options, 'server_name'         , $_SERVER['SERVER_NAME']   );
+                  $this->showErrorCode            = ErrorHandler::optionsPop( $options, 'show_error_code'         ,false);
+    
                 /*
-                 * Relative paths might be given for document root,
+                     * Relative paths might be given for document root,
                  * so we make it explicit.
                  */
-                $dir = @realpath( $this->applicationRoot );
+                    $dir = @realpath( $this->applicationRoot );
                 if ( ! is_string($dir) ) {
-                    throw new Exception("Document root not found: " . $this->applicationRoot);
+                   throw new Exception("Document root not found: " . $this->applicationRoot);
                 } else {
-                    $this->applicationRoot =  str_replace( '\\', '/', $dir );
+                        $this->applicationRoot =  str_replace( '\\', '/', $dir );
                 }
-
+    
                 $this->catchClassNotFound       = !! ErrorHandler::optionsPop( $options, 'catch_class_not_found' , true  );
                 $this->catchSurpressedErrors    = !! ErrorHandler::optionsPop( $options, 'catch_supressed_errors', false );
                 $this->catchAjaxErrors          = !! ErrorHandler::optionsPop( $options, 'catch_ajax_errors'     , true  );
-
-                $this->backgroundText           = ErrorHandler::optionsPop( $options, 'background_text'       , ''    );
-                $this->numLines                 = ErrorHandler::optionsPop( $options, 'snippet_num_lines'     , ErrorHandler::NUM_FILE_LINES        );
-                $this->displayLineNumber        = ErrorHandler::optionsPop( $options, 'display_line_numbers'  , true );
-
-                $this->htmlOnly                 = !! ErrorHandler::optionsPop( $options, 'html_only', true );
-
-                $this->classNotFoundException   = null;
-
-                $wordpress = ErrorHandler::optionsPop( $options, 'wordpress', false );
-                if ( $wordpress ) {
-                    // php doesn't like | in constants and privates, so just set it directly : (
+    
+                $this->backgroundText           = ErrorHandler::optionsPop( $options, 'background_text'       , '' );
+                    $this->numLines               = ErrorHandler::optionsPop( $options, 'snippet_num_lines'     , ErrorHandler::NUM_FILE_LINES        );
+                    $this->displayLineNumber        = ErrorHandler::optionsPop( $options, 'display_line_numbers'  , true );
+    
+                    $this->htmlOnly             = !! ErrorHandler::optionsPop( $options, 'html_only', true );
+    
+            $this->classNotFoundException   = null;
+    
+                    $wordpress = ErrorHandler::optionsPop( $options, 'wordpress', false );
+                    if ( $wordpress ) {
+                       // php doesn't like | in constants and privates, so just set it directly : (
                     $this->defaultErrorReportingOn = E_ERROR | E_WARNING | E_PARSE | E_USER_DEPRECATED & ~E_DEPRECATED & ~E_STRICT;
+            }
+    
+                $concrete5 = ErrorHandler::optionsPop( $options,'concrete5', false );
+                    if ( $concrete5 ) {
+                       $this->defaultErrorReportingOn = E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED;
                 }
-
-                $concrete5 = ErrorHandler::optionsPop( $options, 'concrete5', false );
-                if ( $concrete5 ) {
-                    $this->defaultErrorReportingOn = E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED;
-                }
-
-                if ( $options ) {
+    
+                    if ( $options ) {
                     foreach ( $options as $key => $val ) {
-                        throw new InvalidArgumentException( "Unknown option given $key" );
-                    }
-                }
-
-                $this->isAjax = (
-                                isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) &&
+                        throw newInvalidArgumentException( "Unknown option given $key" );
+                        }
+            }
+    
+                    $this->isAjax = (
+                        isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) &&
                                 ( $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest' )
                         ) || (
                                 isset( $_REQUEST['php_error_is_ajax'] )
-                        );
-
+                            );
+    
                 $this->isBufferSetup = false;
                 $this->bufferOutputStr = '';
                 $this->bufferOutput = false;
-
-                $this->startBuffer();
-            }
-
+    
+                    $this->startBuffer();
+                }
+    
             /*
-             * --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-             * Public Functions
-             * --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+                 * --- --- --- --- ------ --- --- --- --- --- --- --- --- --- --- ---
+                 * Public Functions
+                 * ------ --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
              */
-
-            /**
-             * @return true if this is currently on, false if not.
-             */
-            public function isOn() {
-                return $this->isOn;
-            }
-
-            /**
-             * @return If this is off, this returns true, otherwise false.
-             */
+    
+                /**
+                 * @return trueif this is currently on, false if not.
+                 */
+                public function isOn() {
+                    return $this->isOn;
+                }
+    
+                /**
+                 * @return Ifthis is off, this returns true, otherwise false.
+                 */
             public function isOff() {
                 return !$this->isOn;
             }
-
-            /**
-             * Turns error reporting on.
+    
+                /**
+         * Turns error reporting on.
              *
-             * This will use the strictest error reporting available, or the
-             * level you pass in when creating this using the 'error_reporting_on'
-             * option.
+              * This will use the strictest error reporting available, or the
+                 * level you pass in when creating this using the 'error_reporting_on'
+                 * option.
              *
-             * @return This error reporting handler, for method chaining.
-             */
-            public function turnOn() {
+                 * @return This error reporting handler, for method chaining.
+                 */
+                public function turnOn() {
                 $this->propagateTurnOff();
                 $this->setEnabled( true );
-
-                /*
-                 * Check if file changes have been uploaded,
-                 * and if so, save them.
-                 */
-                global $_php_error_is_ini_enabled;
-                if ( $_php_error_is_ini_enabled ) {
-                    if ( $this->isSavingEnabled ) {
-                        $headers = ErrorHandler::getRequestHeaders();
-
-                        if ( isset($headers[ErrorHandler::HEADER_SAVE_FILE]) ) {
+    
+            /*
+                     * Check if file changes have been uploaded,
+                     * and if so, save them.
+                     */
+              global $_php_error_is_ini_enabled;
+                  if ( $_php_error_is_ini_enabled) {
+                        if ( $this->isSavingEnabled ) {
+                            $headers = ErrorHandler::getRequestHeaders();
+    
+                            if ( isset($headers[ErrorHandler::HEADER_SAVE_FILE]) ) {
                             if ( isset($_POST) && isset($_POST[ErrorHandler::POST_FILE_LOCATION]) ) {
-                                $files = $_POST[ErrorHandler::POST_FILE_LOCATION];
-
+                                    $files = $_POST[ErrorHandler::POST_FILE_LOCATION];
+    
                                 foreach ( $files as $file => $content ) {
                                     @file_put_contents( $file, stripcslashes($content) );
                                 }
-
-                                exit(0);
-                            }
+    
+                            exit(0);
+                       }
+                        }
                         }
                     }
+    
+                    return $this;
                 }
-
-                return $this;
-            }
-
+    
             /**
-             * Turns error reporting off.
-             *
+                 * Turns error reporting off.
+                 *
              * This will use the 'php.ini' setting for the error_reporting level,
-             * or one you have passed in if you used the 'error_reporting_off'
-             * option when creating this.
+                 * or one you have passed in if you used the 'error_reporting_off'
+                 * option when creating this.
              *
-             * @return This error reporting handler, for method chaining.
-             */
-            public function turnOff() {
+                 * @return This error reporting handler,for method chaining.
+                 */
+                public function turnOff() {
                 $this->setEnabled( false );
-
-                return $this;
-            }
-
-            /**
-             * Allows you to run a callback with strict errors turned off.
-             * Standard errors still apply, but this will use the default
-             * error and exception handlers.
-             *
-             * This is useful for when loading libraries which do not
-             * adhere to strict errors, such as Wordpress.
-             *
-             * To use:
-             *
-             *      withoutErrors( function() {
-             *          // unsafe code here
-             *      });
-             *
-             * This will use the error_reporting value for when this is
-             * turned off.
-             *
-             * @param callback A PHP function to call.
-             * @return The result of calling the callback.
-             */
-            public function withoutErrors( $callback ) {
-                if ( ! is_callable($callback) ) {
-                    throw new Exception( "non callable callback given" );
+    
+                    return $this;
                 }
-
-                if ( $this->isOn() ) {
+    
+            /**
+                 * Allows you to run a callback with strict errors turned off.
+                 * Standard errors still apply, but this will use thedefault
+                 * error and exception handlers.
+             *
+                 * This is useful for when loading libraries which do not
+                 * adhere to strict errors, such as Wordpress.
+                 *
+                 * To use:
+                 *
+                 *  withoutErrors( function() {
+               *          // unsafe code here
+                 *    });
+                 *
+                 * This will use the error_reporting value for when this is
+                 * turned off.
+         *
+                 * @param callback A PHP function to call.
+                 * @return The result of calling the callback.
+                 */
+                public function withoutErrors( $callback ) {
+                    if ( ! is_callable($callback) ) {
+                throw new Exception( "non callable callback given" );
+                    }
+   
+                    if ( $this->isOn() ) {
                     $this->turnOff();
-                    $result = $callback();
-                    $this->turnOn();
-
-                    return $result;
-                } else {
+                        $result = $callback();
+                        $this->turnOn();
+    
+                        return $result;
+                    } else {
                     return $callback();
-                }
+                    }
             }
-
-            /**
+    
+                /**
              * This is the shutdown function, which should *only* be called
-             * via 'register_shutdown_function'.
+                * via 'register_shutdown_function'.
              *
-             * It's exposed because it has to be exposed.
+                 * It's exposed because it has to be exposed.
              */
             public function __onShutdown() {
                 global $_php_error_is_ini_enabled;
-
-                if ( $_php_error_is_ini_enabled ) {
-                    if ( $this->isOn() ) {
-                        $error = error_get_last();
-
+    
+                    if ( $_php_error_is_ini_enabled ) {
+                     if ( $this->isOn() ) {
+                    $error = error_get_last();
+    
                         // fatal and syntax errors
                         if (
                                 $error && (
-                                        $error['type'] ===  1 ||
-                                        $error['type'] ===  4 ||
-                                        $error['type'] === 64
-                                )
-                        ) {
+                                            $error['type']===  1 ||
+                                            $error['type'] ===  4 ||
+                                        $error['type']=== 64
+                                    )
+                    ) {
                             $this->reportError( $error['type'], $error['message'], $error['line'], $error['file'] );
-                        } else {
-                            $this->endBuffer();
+                    } else {
+                                $this->endBuffer();
                         }
                     } else {
                         $this->endBuffer();
@@ -1561,195 +1561,195 @@
             /**
              * Flushes the internal buffer,
              * outputting what is left.
-             *
+         *
              * @param append Optional, extra content to append onto the output buffer.
              */
-            private function flushBuffer() {
-                $temp = $this->bufferOutputStr;
-                $this->bufferOutputStr = '';
-
-                return $temp;
+                private function flushBuffer() {
+                    $temp = $this->bufferOutputStr;
+                    $this->bufferOutputStr= '';
+    
+                    return $temp;
             }
-
-            /**
-             * This will finish buffering, and output the page.
-             * It also appends the magic JS onto the beginning of the page,
-             * if enabled, to allow working with Ajax.
-             *
-             * Note that if PHP Error has been disabled in the php.ini file,
-             * or through some other option, such as running from the command line,
-             * then this will do nothing (as no buffering will take place).
-             */
-            public function endBuffer() {
-                if ( $this->isBufferSetup ) {
-                    $content  = ob_get_contents();
-                    $handlers = ob_list_handlers();
-
+    
+        /**
+                 * This will finish buffering, and output the page.
+                 * It also appends the magic JS onto the beginning of the page,
+                 * if enabled, to allow working with Ajax.
+               *
+                 * Note that if PHP Error has been disabled in the php.ini file,
+                 * or through some other option,such as running from the command line,
+                 * then this will do nothing (as no buffering will take place).
+                */
+                public function endBuffer() {
+                   if ( $this->isBufferSetup ) {
+                        $content  = ob_get_contents();
+                        $handlers = ob_list_handlers();
+    
                     $wasGZHandler = false;
-
+    
                     $this->bufferOutput = true;
-                    for ( $i = count($handlers)-1; $i >= 0; $i-- ) {
+                        for ( $i = count($handlers)-1;$i >= 0; $i-- ) {
                         $handler = $handlers[$i];
-
-                        if ( $handler === 'ob_gzhandler' ) {
-                            $wasGZHandler = true;
+    
+                        if ( $handler=== 'ob_gzhandler' ) {
+                                $wasGZHandler = true;
+                                ob_end_clean();
+                            } else if ( $handler === 'default output handler' ) {
                             ob_end_clean();
-                        } else if ( $handler === 'default output handler' ) {
-                            ob_end_clean();
-                        } else if ( $handler === 'zlib output compression' ) {
-                            if (ob_get_level()) {
+                            } else if ( $handler === 'zlib output compression' ) {
+                                if (ob_get_level()) {
                                 while (@ob_end_clean());
                             }
                         } else {
-                            ob_end_flush();
-                        }
+                             ob_end_flush();
+                            }
                     }
-
-                    $content = $this->discardBuffer();
-
+    
+                        $content = $this->discardBuffer();
+    
                     if ( $wasGZHandler ) {
                         ob_start('ob_gzhandler');
                     } else {
-                        ob_start();
-                    }
-
+                            ob_start();
+                        }
+    
                     if (
-                        !$this->isAjax &&
-                         $this->catchAjaxErrors &&
-                         (!$this->htmlOnly || !ErrorHandler::isNonPHPRequest()) &&
-                         !ErrorHandler::isBinaryRequest()
+                         !$this->isAjax &&
+                             $this->catchAjaxErrors &&
+                             (!$this->htmlOnly || !ErrorHandler::isNonPHPRequest()) &&
+                             !ErrorHandler::isBinaryRequest()
                     ) {
-                        $js = $this->getContent( 'displayJSInjection' );
-                        
-                        // attemp to inject the script into the HTML, after the doctype
-                        $matches = array();
-                        preg_match( ErrorHandler::REGEX_DOCTYPE, $content, $matches );
-
-                        if ( $matches ) {
+                    $js = $this->getContent( 'displayJSInjection' );
+                    
+                            // attemp to inject the script into the HTML, after the doctype
+                            $matches = array();
+                  preg_match( ErrorHandler::REGEX_DOCTYPE, $content, $matches );
+   
+                            if ( $matches ) {
                             $doctype = $matches[0];
-                            $content = preg_replace( ErrorHandler::REGEX_DOCTYPE, "$doctype $js", $content );
-                        } else {
-                            echo $js;
+                               $content = preg_replace( ErrorHandler::REGEX_DOCTYPE, "$doctype $js", $content );
+                    } else {
+                                echo $js;
                         }
                     }
-
-                    echo $content;
-                }
+    
+                        echo $content;
             }
-
+                }
+    
             /**
-             * Calls the given method on this object,
-             * captures it's output, and then returns it.
-             *
-             * @param method The name of the method to call.
-             * @return All of the text outputted during the method call.
+                 * Calls the given method on this object,
+                 * captures it's output, and then returns it.
+                 *
+                 * @param method The name of themethod to call.
+                 * @return All of the textoutputted during the method call.
              */
-            private function getContent( $method ) {
-                ob_start();
-                $this->$method();
+                private function getContent( $method ) {
+                    ob_start();
+                    $this->$method();
                 $content = ob_get_contents();
-                ob_end_clean();
-
-                return $content;
-            }
-
-            private function isApplicationFolder( $file ) {
-                return ErrorHandler::isFolderType(
-                        $this->applicationFolders,
-                        $this->applicationFoldersLongest,
-                        $file
-                );
-            }
-
-            private function isIgnoreFolder( $file ) {
-                return ErrorHandler::isFolderType(
-                        $this->ignoreFolders,
-                        $this->ignoreFoldersLongest,
-                        $file
-                );
-            }
-
-            private function getFolderType( $root, $file ) {
-                $testFile = $this->removeRootPath( $root, $file );
-
-                // it's this file : (
-                if ( $file === __FILE__ ) {
-                    $type = ErrorHandler::FILE_TYPE_IGNORE;
-                } else if ( strpos($testFile, '/') === false ) {
-                    $type = ErrorHandler::FILE_TYPE_ROOT;
-                } else if ( $this->isApplicationFolder($testFile) ) {
-                    $type = ErrorHandler::FILE_TYPE_APPLICATION;
-                } else if ( $this->isIgnoreFolder($testFile) ) {
-                    $type = ErrorHandler::FILE_TYPE_IGNORE;
-                } else {
-                    $type = false;
+                    ob_end_clean();
+    
+                   return $content;
                 }
 
-                return array( $type, $testFile );
+                private function isApplicationFolder( $file ) {
+                    return ErrorHandler::isFolderType(
+                            $this->applicationFolders,
+                        $this->applicationFoldersLongest,
+                            $file
+                );
+                }
+    
+                private function isIgnoreFolder( $file ) {
+                    return ErrorHandler::isFolderType(
+                        $this->ignoreFolders,
+                            $this->ignoreFoldersLongest,
+                            $file
+                    );
             }
-
-            /**
-             * Finds the file named, and returns it's contents in an array.
+    
+                private function getFolderType( $root, $file ) {
+                    $testFile = $this->removeRootPath( $root,$file );
+    
+                    // it's this file : (
+                    if ( $file === __FILE__ ) {
+                $type = ErrorHandler::FILE_TYPE_IGNORE;
+                    } else if ( strpos($testFile, '/') === false ) {
+                        $type = ErrorHandler::FILE_TYPE_ROOT;
+                    } else if ( $this->isApplicationFolder($testFile) ) {
+                      $type = ErrorHandler::FILE_TYPE_APPLICATION;
+                    } else if ( $this->isIgnoreFolder($testFile) ) {
+                        $type = ErrorHandler::FILE_TYPE_IGNORE;
+                    } else {
+                    $type = false;
+                    }
+    
+                return array( $type, $testFile );
+                }
+    
+                /**
+                 * Finds the file named,and returns it's contents in an array.
+                 *
+                 * It's essentially the same as 'file_get_contents'. However
+             * this will add cachingat this PHP layer, avoiding lots of
+                 * duplicate calls.
              *
-             * It's essentially the same as 'file_get_contents'. However
-             * this will add caching at this PHP layer, avoiding lots of
-             * duplicate calls.
-             *
-             * It also splits the file into an array of lines, and makes
-             * it html safe.
-             *
+                 * It also splits the file into an array of lines, and makes
+                 * it html safe.
+                 *
              * @param path The file to get the contents of.
              * @return The file we are after, as an array of lines.
-             */
+                 */
             private function getFileContents( $path ) {
                 if ( isset($this->cachedFiles[$path]) ) {
-                    return $this->cachedFiles[$path];
-                } else {
+                        return $this->cachedFiles[$path];
+                    } else {
                     $contents = @file_get_contents( $path );
-
+    
                     if ( $contents ) {
-                        $contents = explode(
+                            $contents = explode(
                                 "\n",
                                 preg_replace(
-                                        '/(\r\n)|(\n\r)|\r/',
+                                    '/(\r\n)|(\n\r)|\r/',
                                         "\n",
-                                        str_replace( "\t", '    ', $contents )
-                                )
-                        );
-
-                        $this->cachedFiles[ $path ] = $contents;
-
-                        return $contents;
+                                            str_replace( "\t", ' ', $contents )
+                                    )
+                    );
+    
+                            $this->cachedFiles[ $path ] = $contents;
+    
+                            return $contents;
+                        }
                     }
+    
+                    return array();
                 }
-
-                return array();
-            }
-
-            /**
-             * Reads out the code from the section of the line,
-             * which is at fault.
+    
+                /**
+                 * Reads out the code from the section of the line,
+             *which is at fault.
+                 *
+             * The array is in a mapping of:array( line-number => line )
              *
-             * The array is in a mapping of: array( line-number => line )
-             *
-             * If something goes wrong, then null is returned.
+           * If something goes wrong, thennull is returned.
              */
             private function readCodeFile( $errFile, $errLine ) {
                 try {
-                    $lines = $this->getFileContents( $errFile );
-
+                        $lines = $this->getFileContents( $errFile );
+    
                     if ( $lines ) {
-                        $numLines = $this->numLines;
-
-                        $searchUp   = ceil( $numLines*0.75 );
-                        $searchDown = $numLines - $searchUp;
-
-                        $countLines = count( $lines );
-
-                        /*
+                            $numLines = $this->numLines;
+    
+                            $searchUp   = ceil( $numLines*0.75 );
+                            $searchDown = $numLines - $searchUp;
+    
+                    $countLines = count( $lines );
+    
+                            /*
                          * Search around the errLine.
                          * We should aim get half of the lines above, and half from below.
-                         * If that fails we get as many as we can.
+                             * If that fails we get as many as we can.
                          */
 
                         /*
@@ -1839,143 +1839,143 @@
              */
             private function removeRootPath( $root, $path ) {
                 $filePath = str_replace( '\\', '/', $path );
-
-                if (
-                        strpos($filePath, $root) === 0 &&
+    
+                    if (
+                            strpos($filePath, $root) === 0 &&
                         strlen($root) < strlen($filePath)
-                ) {
+                    ) {
                     return substr($filePath, strlen($root)+1 );
-                } else {
+                  } else {
                     return $filePath;
                 }
-            }
-
+                }
+    
             /**
-             * Parses, and alters, the errLine, errFile and message given.
-             *
-             * This includes adding syntax highlighting, removing duplicate
-             * information we already have, and making the error easier to
-             * read.
-             */
-            private function improveErrorMessage( $ex, $code, $message, $errLine, $errFile, $root, &$stackTrace ) {
-                // change these to change where the source file is come from
-                $srcErrFile = $errFile;
-                $srcErrLine = $errLine;
-                $altInfo = null;
-                $stackSearchI = 0;
-
-                $skipStackFirst = function( &$stackTrace ) {
-                    $skipFirst = true;
-
-                    foreach ( $stackTrace as $i => $trace ) {
-                         if ( $skipFirst ) {
-                              $skipFirst = false;
-                         } else {
-                              if ( $trace && isset($trace['file']) && isset($trace['line']) ) {
-                                   return array( $trace['file'], $trace['line'], $i );
-                              }
-                        }
-                    }
-
-                    return array( null, null, null );
-                };
-
-                /*
-                 * This is for calling a function that doesn't exist.
+                 * Parses, and alters, the errLine, errFile andmessage given.
                  *
-                 * The message contains a long description of where this takes
-                 * place, even though we are already told this through line and
-                 * file info. So we cut it out.
+                 * This includes adding syntax highlighting,removing duplicate
+                 * information we already have, and making the error easier to
+                 * read.
                  */
+           private function improveErrorMessage( $ex, $code, $message, $errLine, $errFile, $root, &$stackTrace ) {
+                // change these to change where the source file is come from
+                    $srcErrFile = $errFile;
+                    $srcErrLine = $errLine;
+                  $altInfo = null;
+                    $stackSearchI = 0;
+    
+                $skipStackFirst = function( &$stackTrace ) {
+                        $skipFirst = true;
+    
+                    foreach ( $stackTrace as $i => $trace ) {
+                             if ( $skipFirst ) {
+                                  $skipFirst = false;
+                             } else {
+                              if ( $trace && isset($trace['file']) && isset($trace['line']) ) {
+                                    return array( $trace['file'], $trace['line'], $i );
+                                  }
+                            }
+                        }
+    
+                        return array( null, null, null );
+            };
+    
+                    /*
+                     * This is for calling a function that doesn't exist.
+                 *
+                 * The message contains along description of where this takes
+                     * place, even though we are already told this through line and
+                     * file info. So we cut it out.
+                     */
                 if ( $code === 1 ) {
-                    if (
+                        if (
                             ( strpos($message, " undefined method ") !== false ) ||
                             ( strpos($message, " undefined function ") !== false )
                     ) {
                         $matches = array();
-                        preg_match( '/\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((->|::)[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)?\\(\\)$/', $message, $matches );
-
-                        /*
-                         * undefined function or method call
+                            preg_match( '/\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((->|::)[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)?\\(\\)$/', $message, $matches );
+    
+                            /*
+                             * undefined function or method call
                          */
-                        if ( $matches ) {
-                            list( $className, $type, $functionName ) = ErrorHandler::splitFunction( $matches[0] );
-
+                            if ( $matches ) {
+                        list( $className, $type,$functionName ) = ErrorHandler::splitFunction( $matches[0] );
+    
                             if ( $stackTrace && isset($stackTrace[1]) && $stackTrace[1]['args'] ) {
                                 $numArgs = count( $stackTrace[1]['args'] );
-
+    
                                 for ( $i = 0; $i < $numArgs; $i++ ) {
                                     $args[]= ErrorHandler::newArgument( "_" );
-                                }
+                                    }
                             }
-
-                            $message = preg_replace(
-                                    '/\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((->|::)[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)?\\(\\)$/',
-                                    ErrorHandler::syntaxHighlightFunction( $className, $type, $functionName, $args ),
+    
+                        $message = preg_replace(
+                                        '/\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((->|::)[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)?\\(\\)$/',
+                                        ErrorHandler::syntaxHighlightFunction( $className, $type, $functionName, $args ),
                                     $message
-                            );
-                        }
-                    } else if ( $message === 'Using $this when not in object context' ) {
+                                );
+                            }
+                        } else if ( $message === 'Using $this whennot in object context' ) {
                         $message = 'Using <span class="syntax-variable">$this</span> outside object context';
-                    /*
+                       /*
                      * Class not found error.
-                     */
-                    } else if (
+                         */
+                        }else if (
                         strpos($message, "Class ") !== false &&
-                        strpos($message, "not found") !== false
-                    ) {
-                        $matches = array();
-                        preg_match( '/\'(\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)+\'/', $message, $matches );
-
-                        if ( count($matches) > 0 ) {
-                            // lose the 'quotes'
-                            $className = $matches[0];
+                            strpos($message, "not found") !== false
+                        ) {
+                            $matches = array();
+                         preg_match( '/\'(\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)+\'/', $message, $matches );
+    
+                            if( count($matches) > 0 ) {
+                                // lose the 'quotes'
+                        $className = $matches[0];
                             $className = substr( $className, 1, strlen($className)-2 );
-
-                            $message = preg_replace(
-                                    '/\'(\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)+\'/',
+    
+                                $message = preg_replace(
+                                        '/\'(\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*((\\\\)?[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)+\'/',
                                     "<span class='syntax-class'>$className</span>",
                                     $message
                             );
-                        }
-                    }
-                } else if ( $code === 2 ) {
+                            }
+                     }
+                    } else if ( $code === 2 ) {
                     if ( strpos($message, "Missing argument ") === 0 ) {
-                        $message = preg_replace( '/, called in .*$/', '', $message );
-
-                        $matches = array();
+                        $message= preg_replace( '/, called in .*$/', '', $message );
+    
+                            $matches = array();
                         preg_match( ErrorHandler::REGEX_METHOD_OR_FUNCTION_END, $message, $matches );
-
-                        if ( $matches ) {
+    
+                    if ( $matches ) {
                             $argumentMathces = array();
                             preg_match( '/^Missing argument ([0-9]+)/', $message, $argumentMathces );
-                            $highlightArg = count($argumentMathces) === 2 ?
-                                    (((int) $argumentMathces[1])-1) :
-                                    null ;
-
+                                $highlightArg = count($argumentMathces) === 2 ?
+                                        (((int) $argumentMathces[1])-1) :
+                                null ;
+    
                             $numHighlighted = 0;
-                            $altInfo = ErrorHandler::syntaxHighlightFunctionMatch( $matches[0], $stackTrace, $highlightArg, $numHighlighted );
-
+                                $altInfo = ErrorHandler::syntaxHighlightFunctionMatch( $matches[0], $stackTrace, $highlightArg, $numHighlighted );
+    
                             if ( $numHighlighted > 0 ) {
                                 $message = preg_replace( '/^Missing argument ([0-9]+)/', 'Missing arguments ', $message );
-                            }
-
+                                }
+    
                             if ( $altInfo ) {
                                 $message = preg_replace( ErrorHandler::REGEX_METHOD_OR_FUNCTION_END, $altInfo, $message );
-
-                                list( $srcErrFile, $srcErrLine, $stackSearchI ) = $skipStackFirst( $stackTrace );
+   
+                                    list( $srcErrFile, $srcErrLine, $stackSearchI ) = $skipStackFirst( $stackTrace );
+                                }
                             }
-                        }
-                    } else if (
+                        } else if (
                             strpos($message, 'require(') === 0 ||
                             strpos($message, 'include(') === 0
-                    ) {
-                        $endI  = strpos( $message, '):' );
-
+                        ) {
+                            $endI  = strpos( $message, '):' );
+    
                         if ( $endI ) {
-                            // include( is the same length
-                            $requireLen = strlen('require(');
-
+                            // include( is thesame length
+                                $requireLen = strlen('require(');
+    
                             /*
                              * +2 to include the ): at the end of the string
                              */
@@ -2062,124 +2062,124 @@
                         strpos($message, "Undefined variable:") !== false
                     ) {
                         $matches = array();
-                        preg_match( ErrorHandler::REGEX_VARIABLE, $message, $matches );
-
+                        preg_match( ErrorHandler::REGEX_VARIABLE,$message, $matches );
+    
                         if ( count($matches) > 0 ) {
-                            $message = 'Undefined variable <span class="syntax-variable">$' . $matches[0] . '</span>' ;
+                                $message = 'Undefined variable <span class="syntax-variable">$' . $matches[0] . '</span>' ;
                         }
-                    }
+                        }
                 /**
                  * Invalid type given.
-                 */
-                } else if ( $code === 4096 ) {
-                    if ( strpos($message, 'must be an ') ) {
+                     */
+                    } else if ( $code === 4096 ) {
+                        if ( strpos($message, 'must be an ') ) {
                         $message = preg_replace( '/, called in .*$/', '', $message );
-
+    
                         $matches = array();
-                        preg_match( ErrorHandler::REGEX_METHOD_OR_FUNCTION, $message, $matches );
-
+                      preg_match( ErrorHandler::REGEX_METHOD_OR_FUNCTION, $message, $matches );
+    
                         if ( $matches ) {
-                            $argumentMathces = array();
-                            preg_match( '/^Argument ([0-9]+)/', $message, $argumentMathces );
-                            $highlightArg = count($argumentMathces) === 2 ?
+                                $argumentMathces = array();
+                        preg_match( '/^Argument ([0-9]+)/', $message, $argumentMathces );
+                                $highlightArg = count($argumentMathces) === 2 ?
                                     (((int) $argumentMathces[1])-1) :
                                     null ;
-
-                            $fun = ErrorHandler::syntaxHighlightFunctionMatch( $matches[0], $stackTrace, $highlightArg );
-
-                            if ( $fun ) {
-                                $message = str_replace( 'passed to ', 'calling ', $message );
-                                $message = preg_replace( ErrorHandler::REGEX_METHOD_OR_FUNCTION, $fun, $message );
+    
+                                $fun = ErrorHandler::syntaxHighlightFunctionMatch( $matches[0], $stackTrace, $highlightArg );
+    
+                                if ( $fun ) {
+                                    $message = str_replace( 'passed to ', 'calling ', $message );
+                                    $message = preg_replace( ErrorHandler::REGEX_METHOD_OR_FUNCTION, $fun, $message );
                                 $prioritizeCaller = true;
-
+    
                                 /*
                                  * scalars not supported.
-                                 */
-                                $scalarType = null;
-                                if ( ! ErrorHandler::$IS_SCALAR_TYPE_HINTING_SUPPORTED ) {
+                             */
+                                    $scalarType = null;
+                        if ( ! ErrorHandler::$IS_SCALAR_TYPE_HINTING_SUPPORTED ) {
                                     foreach ( ErrorHandler::$SCALAR_TYPES as $scalar ) {
                                         if ( stripos($message, "must be an instance of $scalar,") !== false ) {
-                                            $scalarType = $scalar;
-                                            break;
+                                        $scalarType = $scalar;
+                                        break;
+                                            }
                                         }
-                                    }
                                 }
-
-                                if ( $scalarType !== null ) {
-                                    $message = preg_replace( '/^Argument [0-9]+ calling /', 'Incorrect type hinting for ', $message );
-                                    $message = preg_replace(
+    
+                                if ( $scalarType !==null ) {
+                                        $message = preg_replace( '/^Argument [0-9]+ calling /', 'Incorrect type hinting for ', $message );
+                                $message = preg_replace(
                                             '/ must be an instance of ' . ErrorHandler::REGEX_PHP_IDENTIFIER . '\b.*$/',
                                             ", ${scalarType} is not supported",
-                                            $message
+                                                $message
                                     );
-
+    
                                     $prioritizeCaller = false;
-                                } else {
-                                    $message = preg_replace( '/ must be an (instance of )?' . ErrorHandler::REGEX_PHP_IDENTIFIER . '\b/', '', $message );
-
+                              } else {
+                                      $message = preg_replace( '/ must be an (instance of )?' . ErrorHandler::REGEX_PHP_IDENTIFIER . '\b/', '', $message );
+    
                                     if ( preg_match('/, none given$/', $message) ) {
                                         $message = preg_replace( '/^Argument /', 'Missing argument ', $message );
                                         $message = preg_replace( '/, none given$/', '', $message );
-                                    } else {
+                                        } else {
                                         $message = preg_replace( '/^Argument /', 'Incorrect argument ', $message );
                                     }
                                 }
-
+    
                                 if ( $prioritizeCaller ) {
                                     list( $srcErrFile, $srcErrLine, $stackSearchI ) = $skipStackFirst( $stackTrace );
+                                 }
                                 }
                             }
                         }
-                    }
                 }
-
+    
                 if ( $stackTrace !== null ) {
-                    $isEmpty = count( $stackTrace ) === 0 ;
-
-                    if ( $isEmpty ) {
-                        array_unshift( $stackTrace, array(
+                $isEmpty = count( $stackTrace ) === 0 ;
+    
+                       if ( $isEmpty ) {
+                            array_unshift( $stackTrace, array(
                                 'line' => $errLine,
-                                'file' => $errFile
+                                    'file' => $errFile
                         ) );
-                    } else if (
-                            count($stackTrace) > 0 && (
-                                    (! isset($stackTrace[0]['line'])) ||
+                        } else if (
+                                count($stackTrace)> 0 && (
+                                        (! isset($stackTrace[0]['line'])) ||
                                     ($stackTrace[0]['line'] !== $errLine)
                             )
-                    ) {
-                        array_unshift( $stackTrace, array(
-                                'line' => $errLine,
+                        ) {
+                            array_unshift( $stackTrace, array(
+                                    'line' => $errLine,
                                 'file' => $errFile
-                        ) );
-                    }
-
+                            ) );
+                        }
+   
                     if ( $stackTrace && !$isEmpty ) {
                         $ignoreCommons = false;
-                        $len = count($stackTrace);
-
-                        /*
+                           $len = count($stackTrace);
+    
+                            /*
                          * The code above can prioritize a location in the stack trace,
                          * this is 'stackSearchI'. So we should start our search from there,
-                         * and work down the stack.
+                     * and work down the stack.
                          *
-                         * This is built in a way so that when it reaches the end, it'll loop
+                             * This is built in a way so that when it reaches the end, it'll loop
                          * back round to the beginning, and check the traces we didn't check
-                         * last time.
-                         *
+                             * last time.
+                             *
                          * If stackSearchI was not altered, then it just searches from top
-                         * through to the bottom.
-                         */
-                        for ( $i = $stackSearchI; $i < $stackSearchI+$len; $i++ ) {
-                            $trace = &$stackTrace[ $i % $len ];
-
+                             * through to the bottom.
+                             */
+                        for ( $i = $stackSearchI;$i < $stackSearchI+$len; $i++ ) {
+                        $trace = &$stackTrace[ $i % $len ];
+    
                             if ( isset($trace['file']) && isset($trace['line']) ) {
-                                list( $type, $_ ) = $this->getFolderType( $root, $trace['file'] );
-
-                                if ( $type !== ErrorHandler::FILE_TYPE_IGNORE ) {
-                                    if ( $type === ErrorHandler::FILE_TYPE_APPLICATION ) {
+                             list( $type, $_ ) = $this->getFolderType( $root, $trace['file'] );
+    
+                                    if ( $type !== ErrorHandler::FILE_TYPE_IGNORE ) {
+                                    if ($type === ErrorHandler::FILE_TYPE_APPLICATION ) {
                                         $srcErrLine = $trace['line'];
-                                        $srcErrFile = $trace['file'];
-
+                                         $srcErrFile = $trace['file'];
+    
                                         break;
                                     } else if ( ! $ignoreCommons ) {
                                         $srcErrLine = $trace['line'];
@@ -2296,133 +2296,133 @@
                             $highlightI = $i;
                             break;
                         }
-                    }
-
-                    foreach ( $stackTrace as $i => $trace ) {
-                        if ( $trace ) {
+                        }
+ 
+                        foreach ( $stackTrace as $i => $trace ) {
+                            if ( $trace ) {
                             // line
-                            $line = str_pad( $trace['line']     , $lineLen, ' ', STR_PAD_LEFT  );
-
-                            // file
-                            $file = $trace['file'];
-                            $fileKlass = '';
-                            if ( $trace['is_native'] ) {
-                                $fileKlass = 'file-internal-php';
-                            } else {
-                                $fileKlass = 'filename ' . ErrorHandler::folderTypeToCSS( $trace['file_type'] );
+                                $line = str_pad($trace['line']     , $lineLen, ' ', STR_PAD_LEFT  );
+    
+                           // file
+                                $file = $trace['file'];
+                                $fileKlass = '';
+                                if ( $trace['is_native'] ) {
+                                    $fileKlass = 'file-internal-php';
+                             } else {
+                            $fileKlass = 'filename ' . ErrorHandler::folderTypeToCSS( $trace['file_type'] );
                             }
                             $file = $file . str_pad( '', $fileLen-strlen($file), ' ', STR_PAD_LEFT );
-
-                            // info
-                            $info = $trace['info'];
-                            if ( $info ) {
-                                $info = str_replace( "\n", '\n', $info );
+ 
+                                // info
+                               $info = $trace['info'];
+                                if ( $info ) {
+                            $info = str_replace( "\n", '\n', $info );
                                 $info = str_replace( "\r", '\r', $info );
-                            } else {
-                                $info = '&nbsp;';
-                            }
-
+                                } else {
+                                    $info = '&nbsp;';
+                                }
+    
                             // line + file + info
-                            $file = trim( $file );
-
-                            $stackStr =
-                                    "<td class='linenumber'>$line</td>" .
-                                    "<td class='$fileKlass'>$file</td>" .
-                                    "<td class='lineinfo'>$info</td>"   ;
-
-                            if ( $trace['is_native'] ) {
-                                $cssClass = 'is-native ';
+                        $file = trim( $file );
+    
+                        $stackStr =
+                                        "<td class='linenumber'>$line</td>" .
+                                        "<td class='$fileKlass'>$file</td>".
+                                        "<td class='lineinfo'>$info</td>"   ;
+    
+                                if ( $trace['is_native'] ) {
+                                    $cssClass = 'is-native ';
                             } else {
                                 $cssClass = '';
-                            }
-
-                            if ( $highlightI === $i ) {
+                             }
+    
+                                if ( $highlightI === $i ) {
                                 $cssClass .= ' highlight';
                             } else if ( $highlightI > $i ) {
-                                $cssClass .= ' pre-highlight';
-                            }
-
-                            if (
-                                    $i !== 0 &&
-                                    isset($trace['exception']) &&
-                                    $trace['exception']
-                            ) {
-                                $ex = $trace['exception'];
-
-                                $exHtml = '<tr class="error-stack-trace-exception"><td>' .
+                                    $cssClass .= ' pre-highlight';
+                        }
+    
+                                if (
+                                        $i !== 0 &&
+                                isset($trace['exception']) &&
+                                        $trace['exception']
+                                ) {
+                                    $ex = $trace['exception'];
+    
+                                    $exHtml = '<tr class="error-stack-trace-exception"><td>' .
                                             'exception &quot;' .
-                                            htmlspecialchars( $ex->getMessage() ) .
+                                        htmlspecialchars( $ex->getMessage() ) .
                                             '&quot;' .
                                         '</td></tr>';
                             } else {
-                                $exHtml = '';
-                            }
+                                    $exHtml = '';
+                                }
 
-                            $data = '';
-                            if ( isset($trace['file-id']) ) {
+                                $data = '';
+                                if ( isset($trace['file-id']) ) {
                                 $data = ' data-file-id="' . $trace['file-id'] . '"' .
                                             ' data-line="' . $line . '"' ;
                             }
-
-                            $stackTrace[$i] = "$exHtml<tr class='error-stack-trace-line $cssClass' $data>$stackStr</tr>";
+    
+                                $stackTrace[$i] = "$exHtml<tr class='error-stack-trace-line $cssClass' $data>$stackStr</tr>";
                         }
+                        }
+    
+                        return '<table id="error-stack-trace">' . join( "", $stackTrace ) . '</table>';
+                    } else {
+                return null;
                     }
-
-                    return '<table id="error-stack-trace">' . join( "", $stackTrace ) . '</table>';
-                } else {
-                    return null;
                 }
-            }
-
-            private function logError( $message, $file, $line, $ex=null ) {
+    
+            private function logError( $message, $file, $line, $ex=null) {
                 if ( $ex ) {
-                    $trace = $ex->getTraceAsString();
-                    $parts = explode( "\n", $trace );
-                    $trace = "        " . join( "\n        ", $parts );
-
+                        $trace = $ex->getTraceAsString();
+                $parts = explode( "\n", $trace);
+                        $trace = "     " . join( "\n        ", $parts );
+    
                     if ( ! ErrorHandler::isIIS() ) {
-                        error_log( "$message \n           $file, $line \n$trace" );
-                    }
-                } else {
-                    if ( ! ErrorHandler::isIIS() ) {
-                        error_log( "$message \n           $file, $line" );
+                            error_log( "$message \n           $file, $line \n$trace" );
+                        }
+            } else {
+                        if ( ! ErrorHandler::isIIS() ) {
+                         error_log( "$message \n       $file, $line" );
+                }
                     }
                 }
-            }
-
-            /**
-             * Given a class name, which can include a namespace,
-             * this will report that it is not found.
+    
+                /**
+                * Given a class name, which can includea namespace,
+                 * this will report that it is not found.
              *
-             * This will also report it as an exception,
-             * so you will get a full stack trace.
+                 * This will also reportit as an exception,
+                 * so youwill get a full stack trace.
              */
-            public function reportClassNotFound( $className ) {
-                throw new \ErrorException( "Class '$className' not found", E_ERROR, 0, __FILE__, __LINE__ );
-            }
-
+                public function reportClassNotFound( $className ) {
+                throw new \ErrorException( "Class '$className'not found", E_ERROR, 0, __FILE__, __LINE__ );
+                }
+    
             /**
-             * Given an exception, this will report it.
-             */
+                 * Given an exception,this will report it.
+                 */
             public function reportException( $ex ) {
-                $this->reportError(
-                        $ex->getCode(),
+            $this->reportError(
+                            $ex->getCode(),
                         $ex->getMessage(),
-                        $ex->getLine(),
-                        $ex->getFile(),
-                        $ex
-                );
-            }
+                            $ex->getLine(),
+                          $ex->getFile(),
+                    $ex
+                    );
+                }
 
-            /**
-             * The entry point for handling an error.
-             *
-             * This is the lowest entry point for error reporting,
+                /**
+                 * The entry point for handling an error.
+                 *
+                 * This is the lowest entry point for error reporting,
              * and for that reason it can either take just error info,
-             * or a combination of error and exception information.
-             *
+                 * or a combination of error and exception information.
+                 *
              * Note that this will still log errors in the error log
-             * even when it's disabled with ini. It just does nothing
+                 * even when it's disabledwith ini. It just does nothing
              * more than that.
              */
             public function reportError( $code, $message, $errLine, $errFile, $ex=null ) {
@@ -2557,129 +2557,129 @@
                                     'file' => $file,
                                     'line' => $line
                             ) );
-                        }
-
-                        $stackTrace = ( $stackTrace !== null ) ?
-                                array_merge( $stack, $stackTrace ) :
-                                $stack ;
-
-                        if ( count($stackTrace) > 0 ) {
+                    }
+    
+                    $stackTrace = ( $stackTrace !== null )?
+                                    array_merge( $stack, $stackTrace ) :
+                                    $stack ;
+    
+                    if ( count($stackTrace) > 0 ) {
                             $stackTrace[0]['exception'] = $ex;
-                        }
+                       }
                     }
-
+    
                     $message = $ex->getMessage();
-                    $errFile = $ex->getFile();
-                    $errLine = $ex->getLine();
-
+                        $errFile = $ex->getFile();
+                        $errLine =$ex->getLine();
+    
                     $code = $ex->getCode();
-
-                    if ( method_exists($ex, 'getSeverity') ) {
-                        $severity = $ex->getSeverity();
-
-                        if ( $code === 0 && $severity !== 0 && $severity !== null ) {
-                            $code = $severity;
+    
+                        if( method_exists($ex, 'getSeverity') ) {
+                            $severity = $ex->getSeverity();
+    
+                            if ( $code === 0 && $severity !== 0 && $severity !== null ) {
+                                $code = $severity;
+                            }
                         }
                     }
+    
+                    return array( $ex, $stackTrace, $code, $errFile, $errLine );
                 }
-
-                return array( $ex, $stackTrace, $code, $errFile, $errLine );
-            }
-
-            private function generateDumpHTML( $arrays, $request, $response, $server ) {
-                $arrToHtml = function( $name, $array, $css='' ) {
+    
+                private function generateDumpHTML( $arrays, $request, $response, $server ) {
+                    $arrToHtml = function( $name, $array, $css='' ) {
                     $max = 0;
-
+    
                     foreach ( $array as $e => $v ) {
                         $max = max( $max, strlen( $e ) );
-                    }
-
-                    $snippet = "<h2 class='error_dump_header'>$name</h2>";
-
+                        }
+    
+                        $snippet = "<h2 class='error_dump_header'>$name</h2>";
+    
                     foreach ( $array as $e => $v ) {
-                        $e = str_pad( $e, $max, ' ', STR_PAD_RIGHT );
-
-                        $e = htmlentities( $e );
-                        $v = ErrorHandler::identifyTypeHTML( $v, 3 );
-
-                        $snippet .= "<div class='error_dump_key'>$e</div><div class='error_dump_mapping'>=&gt;</div><div class='error_dump_value'>$v</div>";
+                            $e = str_pad( $e, $max, ' ', STR_PAD_RIGHT );
+    
+                            $e = htmlentities( $e );
+                            $v = ErrorHandler::identifyTypeHTML( $v, 3 );
+    
+                            $snippet.= "<div class='error_dump_key'>$e</div><div class='error_dump_mapping'>=&gt;</div><div class='error_dump_value'>$v</div>";
                     }
-
-                    return "<div class='error_dump $css'>$snippet</div>";
-                };
-
+    
+                       return "<div class='error_dump $css'>$snippet</div>";
+                    };
+    
                 $html = '';
-                foreach ( $arrays as $key => $value ) {
-                    if ( isset($value) && $value ) {
-                        $html .= $arrToHtml( $key, $value );
-                    } else {
-                        unset($arrays[$key]);
-                    }
-                }
-
-                return "<div class='error-dumps'>" .
-                            $html .
-                            $arrToHtml( 'request', $request, 'dump_request' ) .
-                            $arrToHtml( 'response', $response, 'dump_response' ) .
-                            $arrToHtml( 'server', $server, 'dump_server' ) .
-                        "</div>";
-            }
-
-            private function generateFileLineSets( $srcErrFile, $srcErrLine, &$stackTrace ) {
-                $fileLineID = 1;
-                $srcErrID = "file-line-$fileLineID";
-                $fileLineID++;
-
-
-                $lines = $this->getFileContents( $srcErrFile );
-                $minSize = count( $lines );
-
-                $srcFileSet = new FileLinesSet( $srcErrFile, $srcErrID, $lines );
-
-                $seenFiles = array( $srcErrFile => $srcFileSet );
-
-                if ( $stackTrace ) {
-                    foreach ( $stackTrace as $i => &$trace ) {
-                        if ( $trace && isset($trace['file']) && isset($trace['line']) ) {
-                            $file = $trace['file'];
-                            $line = $trace['line'];
-
-                            if ( isset($seenFiles[$file]) ) {
-                                $fileSet = $seenFiles[$file];
-                            } else {
-                                $traceFileID = "file-line-$fileLineID";
-
-                                $lines = $this->getFileContents( $file );
-                                $minSize = max( $minSize, count($lines) );
-                                $fileSet = new FileLinesSet( $file, $traceFileID, $lines );
-
-                                $seenFiles[ $file ] = $fileSet;
-
-                                $fileLineID++;
-                            }
-
-                            $trace['file-id'] = $fileSet->getHTMLID();
+            foreach ( $arrays as $key => $value ) {
+                        if ( isset($value) && $value ) {
+                          $html .= $arrToHtml( $key, $value );
+                        } else {
+                            unset($arrays[$key]);
                         }
                     }
+    
+                return "<div class='error-dumps'>" .
+                                $html .
+                            $arrToHtml( 'request', $request, 'dump_request' ) .
+                                $arrToHtml( 'response', $response, 'dump_response' ) .
+                                $arrToHtml( 'server', $server, 'dump_server' ) .
+                         "</div>";
                 }
-
-                return array( array_values($seenFiles), $minSize );
+    
+                private function generateFileLineSets( $srcErrFile, $srcErrLine, &$stackTrace) {
+                    $fileLineID = 1;
+                    $srcErrID = "file-line-$fileLineID";
+                    $fileLineID++;
+    
+    
+                    $lines = $this->getFileContents( $srcErrFile );
+                    $minSize = count( $lines );
+    
+                    $srcFileSet = new FileLinesSet( $srcErrFile, $srcErrID, $lines );
+   
+                    $seenFiles = array( $srcErrFile => $srcFileSet );
+    
+                    if ( $stackTrace ) {
+                    foreach ( $stackTrace as $i => &$trace ) {
+                            if ( $trace && isset($trace['file']) && isset($trace['line']) ) {
+                            $file= $trace['file'];
+                                $line = $trace['line'];
+    
+                            if ( isset($seenFiles[$file]) ) {
+                                    $fileSet = $seenFiles[$file];
+                            } else {
+                                   $traceFileID = "file-line-$fileLineID";
+    
+                            $lines = $this->getFileContents( $file );
+                                    $minSize = max( $minSize, count($lines));
+                                    $fileSet = new FileLinesSet( $file, $traceFileID, $lines );
+    
+                                    $seenFiles[ $file ] = $fileSet;
+    
+                                $fileLineID++;
+                            }
+    
+                                $trace['file-id'] = $fileSet->getHTMLID();
+                        }
+                        }
             }
-
-            /*
-             * Even if disabled, we still act like reporting is on,
-             * if it's turned on.
-             *
-             * We just don't do anything.
-             */
-            private function setEnabled( $isOn ) {
-                $wasOn = $this->isOn;
-                $this->isOn = $isOn;
-
-                global $_php_error_is_ini_enabled;
-                if ( $_php_error_is_ini_enabled ) {
-                    /*
-                     * Only turn off, if we're moving from on to off.
+    
+                    return array( array_values($seenFiles), $minSize );
+                }
+    
+                /*
+                 *Even if disabled, we still act like reporting is on,
+                 * if it's turned on.
+                 *
+                 * We just don't do anything.
+                */
+                private function setEnabled( $isOn ) {
+                    $wasOn = $this->isOn;
+                    $this->isOn = $isOn;
+    
+                    global $_php_error_is_ini_enabled;
+                    if ( $_php_error_is_ini_enabled ) {
+                        /*
+                         * Only turn off, if we're moving from on to off.
                      *
                      * This is so if it's turned off without turning on,
                      * we don't change anything.
@@ -2813,89 +2813,89 @@
                                                 break;
                                             // not us, and not the autoloader, so error!
                                             } else if (
-                                                    $function !== '__autoload' &&
+                                                   $function !== '__autoload' &&
                                                     $function !== 'spl_autoload_call' &&
                                                     strpos($function, 'php_error\\') === false
                                             ) {
                                                 break;
-                                            }
                                         }
-                                    }
-
-                                    if ( $error ) {
-                                        $classException = new \ErrorException( "Class '$className' not found", E_ERROR, 0, __FILE__, __LINE__ );
+                                            }
+                                }
+    
+                                        if ( $error) {
+                                            $classException = new \ErrorException( "Class '$className' not found", E_ERROR, 0, __FILE__, __LINE__ );
                                     }
                                 }
-                            } );
+                                } );
                         }
-
-                        $self->isShutdownRegistered = true;
+    
+                            $self->isShutdownRegistered = true;
+                        }
                     }
-                }
-            }
-
-            private function displayJSInjection() {
-                ?><script data-php_error="magic JS, just ignore this!">
+              }
+    
+                private function displayJSInjection() {
+                    ?><script data-php_error="magic JS, just ignore this!">
                     "use strict";
-
-                    (function( window ) {
+    
+                        (function( window ) {
                         if ( window.XMLHttpRequest ) {
-                            /**
+                                /**
                              * A method wrapping helper function.
                              *
-                             * Wraps the method given, from the old prototype to the new
+                                 * Wraps the method given, from the old prototype to the new
                              * XMLHttpRequest prototype.
-                             *
-                             * This only happens if the old one actually has that prototype.
+                                 *
+                         * This only happens if the old one actually has that prototype.
                              * If the browser doesn't support a prototype, then it doesn't
-                             * get wrapped.
-                             */
-                            var wrapMethod = function( XMLHttpRequest, old, prop ) {
-                                if ( old.prototype[prop] ) {
+                         * get wrapped.
+                                 */
+                            var wrapMethod =function( XMLHttpRequest, old, prop ) {
+                            if ( old.prototype[prop] ) {
                                     var behaviours = ( arguments.length > 3 ) ?
-                                            Array.prototype.slice.call( arguments, 3 ) :
-                                            null ;
-
-                                    XMLHttpRequest.prototype[prop] = function() {
+                                                Array.prototype.slice.call( arguments, 3 ) :
+                                        null ;
+    
+                                       XMLHttpRequest.prototype[prop] = function() {
                                         if ( behaviours !== null ) {
-                                            for ( var i = 0; i < behaviours.length; i++ ) {
+                                                for( var i = 0; i < behaviours.length; i++ ) {
                                                 behaviours[i].call( this, arguments, prop );
-                                            }
                                         }
-
+                                        }
+    
                                         return this.__.inner[prop].apply( this.__.inner, arguments );
                                     };
-                                }
+                                    }
                             }
-
-                            var postMethod = function( XMLHttpRequest, prop ) {
-                                if ( XMLHttpRequest.prototype[prop] ) {
-                                    var behaviours = Array.prototype.slice.call( arguments, 2 );
-
-                                    var previous = XMLHttpRequest.prototype[prop];
-                                    XMLHttpRequest.prototype[prop] = function() {
-                                        var r = previous.apply( this, arguments );
-
-                                        for ( var i = 0; i < behaviours.length; i++ ) {
-                                            behaviours[i].call( this, arguments, prop );
-                                        }
-
-                                        return r;
+    
+                              var postMethod = function( XMLHttpRequest, prop ) {
+                                 if ( XMLHttpRequest.prototype[prop] ) {
+                                    var behaviours = Array.prototype.slice.call(arguments, 2 );
+    
+                                        var previous = XMLHttpRequest.prototype[prop];
+                                        XMLHttpRequest.prototype[prop]= function() {
+                                            var r = previous.apply( this, arguments );
+    
+                                            for ( var i = 0; i < behaviours.length; i++ ) {
+                                                behaviours[i].call( this, arguments, prop );
+                                    }
+    
+                                            return r;
                                     };
                                 }
-                            }
-
-                            /*
-                             * Certain properties will error when read,
-                             * and which ones do vary from browser to browser.
+                               }
+    
+                                /*
+                            * Certain properties will error when read,
+                                 * and which ones do vary from browser to browser.
                              *
-                             * I've found both Chrome and Firefox will error
+                                 * I've found both Chrome and Firefox will error
                              * on _different_ properties.
                              *
-                             * So every read needs to be wrapped in a try/catch,
-                             * and just hope it doesn't error.
-                             */
-                            var copyProperties = function( src, dest, props ) {
+                                 * So every read needs to be wrapped in a try/catch,
+                                 * and just hope it doesn't error.
+                                 */
+                                var copyProperties = function( src, dest, props ) {
                                 for ( var i = 0; i < props.length; i++ ) {
                                     try {
                                         var prop = props[i];
@@ -3038,74 +3038,74 @@
                                          */
                                         iDoc.getElementById('ajax-close').onclick = function() {
                                             copyRequestProperties( self.__.inner, self, true );
-
+    
                                             // clear the response
                                             self.response       = '';
                                             self.responseText   = '';
-                                            self.responseXML    = null;
-
-                                            if ( self.onreadystatechange ) {
+                                            self.responseXML= null;
+    
+                                                if ( self.onreadystatechange ) {
                                                 self.onreadystatechange( ev );
-                                            }
+                                        }
 
-                                            closeIFrame();
+                                                closeIFrame();
                                             return false;
-                                        };
-
+                                            };
+    
                                         var html = iDoc.getElementsByTagName('html')[0];
                                         html.setAttribute( 'class', 'ajax' );
-
-                                        setTimeout( function() {
-                                            iframe.style.opacity = 1;
+  
+                                            setTimeout( function() {
+                                                iframe.style.opacity = 1;
                                         }, 1 );
                                     }
-                                }
-
-                                /*
-                                 * Placed inside a timeout, incase the document doesn't exist yet.
+                                    }
+    
+                                    /*
+                                 * Placed inside atimeout, incase the document doesn't exist yet.
                                  *
-                                 * Can happen if the page ajax's straight away.
+                                     * Can happen if the page ajax's straight away.
                                  */
-                                setTimeout( function() {
-                                    var body = document.getElementsByTagName('body')[0];
+                                    setTimeout( function() {
+                                        var body = document.getElementsByTagName('body')[0];
                                     body.appendChild( iframe );
                                 }, 1 );
-                            }
-
-                            var old = window.XMLHttpRequest;
-
-                            /**
-                             * The middle man http request object.
-                             *
-                             * Acts just like a normal one, but will show errors if they
-                             * occur instead of running the result.
-                             */
-                            var XMLHttpRequest = function() {
-                                initializeXMLHttpRequest.call( this );
-                            }
-
-                            var initializeXMLHttpRequest = function() {
-                                var self = this,
-                                    inner = new old();
-
+                               }
+    
+                                var old = window.XMLHttpRequest;
+ 
                                 /**
-                                 * With a buggy XMLHttpRequest, it's possible to accidentally run the error handler
-                                 * multiple times.
+                             * The middle man http request object.
                                  *
-                                 * This is a flag to only do it once, to keep the code more defensive.
-                                 */
-                                var errorOnce   = true,
-                                    isAjaxError = false;
-
-                                var stateResults = [];
-
-                                inner.onreadystatechange = function( ev ) {
+                                 * Acts just like a normal one, but will show errors if they
+                                 * occur instead of running the result.
+                             */
+                                var XMLHttpRequest = function() {
+                                 initializeXMLHttpRequest.call( this );
+                                }
+    
+                                var initializeXMLHttpRequest = function() {
+                                    var self = this,
+                                    inner = new old();
+    
+                               /**
+                                     * With a buggy XMLHttpRequest, it's possible to accidentally run the error handler
+                                     * multiple times.
+                                 *
+                                     * This is a flag to only do it once, to keep the code more defensive.
+                                     */
+                                    var errorOnce   = true,
+                                        isAjaxError = false;
+    
+                               var stateResults = [];
+    
+                                inner.onreadystatechange =function( ev ) {
                                     copyRequestProperties( inner, self, true, true );
-
-                                    var state = inner.readyState;
-
-                                    /*
-                                     * Check headers for error.
+    
+                                var state = inner.readyState;
+    
+                                        /*
+                                         * Check headers for error.
                                      */
                                     if ( ! isAjaxError && state >= 2 ) {
                                         /*
@@ -3252,61 +3252,61 @@
                 $serverName        = $this->serverName;
                 $backgroundText    = $this->backgroundText;
                 $displayLineNumber = $this->displayLineNumber;
-                $saveUrl           = $this->saveUrl;
-                $isSavingEnabled   = $this->isSavingEnabled;
-                $showErrorCode	   = $this->showErrorCode;
-                $codeDescription   = (!empty(ErrorHandler::$PHP_ERROR_MAPPINGS[$code]) ? ErrorHandler::$PHP_ERROR_MAPPINGS[$code] : '');
-
-                /*
-                 * When a query string is not provided,
+                    $saveUrl           = $this->saveUrl;
+                    $isSavingEnabled   = $this->isSavingEnabled;
+                    $showErrorCode	   = $this->showErrorCode;
+                    $codeDescription   = (!empty(ErrorHandler::$PHP_ERROR_MAPPINGS[$code]) ? ErrorHandler::$PHP_ERROR_MAPPINGS[$code] : '');
+    
+                    /*
+                     * When a query string is not provided,
                  * in some versions it's a blank string,
-                 * whilst in others it's not set at all.
-                 */
-                if ( isset($_SERVER['QUERY_STRING']) ) {
-                    $requestUrl = str_replace( $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI'] );
-                    $requestUrlLen = strlen( $requestUrl );
-
-                    // remove the '?' if it's there (I suspect it isn't always, but don't take my word for it!)
+                     * whilst in others it's not set at all.
+                     */
+                    if ( isset($_SERVER['QUERY_STRING']) ) {
+                        $requestUrl = str_replace( $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI'] );
+                        $requestUrlLen = strlen( $requestUrl );
+    
+                        // remove the '?' if it's there (I suspect it isn't always, but don't take my word for it!)
                     if ( $requestUrlLen > 0 && substr($requestUrl, $requestUrlLen-1) === '?' ) {
-                        $requestUrl = substr( $requestUrl, 0, $requestUrlLen-1 );
-                    }
-                } else {
+                          $requestUrl = substr( $requestUrl, 0, $requestUrlLen-1 );
+                        }
+                    } else {
                     $requestUrl = $_SERVER['REQUEST_URI'];
-                }
-
+                    }
+    
                 header_remove('Content-Transfer-Encoding');
-                $this->displayHTML(
-                        // pre, in the head
-                        function() use( $message, $errFile, $errLine ) {
-                                echo "<!--\n" .
-                                        "$message\n" .
+                    $this->displayHTML(
+                    // pre, in the head
+                            function() use( $message, $errFile, $errLine ) {
+                                    echo "<!--\n" .
+                                    "$message\n" .
                                         "$errFile, $errLine\n" .
                                     "-->";
-                        },
-
+                            },
+    
                         // the content
-                        function() use (
-                                $requestUrl,
-                                $backgroundText, $serverName, $applicationRoot,
+                            function() use (
+                                    $requestUrl,
+                                    $backgroundText, $serverName, $applicationRoot,
                                 $message, $errLine, $errFile, $errFileType, $stackTrace,
                                 &$fileLinesSets, $numFileLines,
-                                $displayLineNumber,
-                                $dumpInfo,
-                                $isSavingEnabled,
-                                $showErrorCode,
+                                    $displayLineNumber,
+                                    $dumpInfo,
+                            $isSavingEnabled,
+                                    $showErrorCode,
                                 $code,
-	                            $codeDescription
-                        ) {
+    	                        $codeDescription
+                            ) {
                             if ( $backgroundText ) { ?>
-                                <div id="error-wrap">
-                                    <div id="error-back"><?php echo $backgroundText ?></div>
+                             <div id="error-wrap">
+                                        <div id="error-back"><?php echo $backgroundText ?></div>
                                 </div>
-                            <?php } ?>
-
-                            <h2 id="error-file-root"><?php echo $serverName ?> | <?php echo $applicationRoot ?></h2>
-                            <h2 id="ajax-info">
-                                <span id="ajax-tab" class="ajax-button">AJAX PAUSED</span>
-
+                                <?php } ?>
+    
+                                <h2 id="error-file-root"><?php echo $serverName ?> | <?php echo $applicationRoot ?></h2>
+                        <h2 id="ajax-info">
+                                    <span id="ajax-tab" class="ajax-button">AJAX PAUSED</span>
+    
                                 <span class="ajax-url"><?php echo $serverName ?><?php echo $requestUrl ?></span>
                                 <span class="ajax-buttons">
                                     <a href="#" id="ajax-close" class="ajax-button">X</a>
@@ -3568,827 +3568,17 @@
                 echo "<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>";
 
                 ?><style>
-                    html, body {
-                        margin: 0;
-                        padding: 0;
-                        width: 100%;
-                        height: 100%;
-                    }
-                        body {
-                            color: #f0f0f0;
-
-                            tab-size: 4;
-                        }
-
-                    ::-moz-selection{background: #662039 !important; color: #fff !important; text-shadow: none;}
-                    ::selection {background: #662039 !important; color: #fff !important; text-shadow: none;}
-
-                    a,
-                    .error-stack-trace-line {
-                        -webkit-transition: color 120ms linear, background 120ms linear;
-                           -moz-transition: color 120ms linear, background 120ms linear;
-                            -ms-transition: color 120ms linear, background 120ms linear;
-                             -o-transition: color 120ms linear, background 120ms linear;
-                                transition: color 120ms linear, background 120ms linear;
-                    }
-
-                    a,
-                    a:visited,
-                    a:hover,
-                    a:active {
-                        color: #9ae;
-                        text-decoration: none;
-                    }
-                    a:hover,
-                    a.error-editor-link:hover {
-                        color: #aff;
-                    }
-                    a.error-editor-link,
-                    a.error-editor-link:visited,
-                    a.error-editor-link:active {
-                        color: inherit;
-                    }
-
-                    h2,
-                    #error-editor .ace_line,
-                    #error-editor .ace_editor,
-                    #error-editor .ace_gutter,
-                    .background {
-                        font-size: 16px;
-                        font-family: inconsolata, 'Droid Sans Mono', "DejaVu Sans Mono", consolas, monospace;
-                    }
-                    #error-editor .ace_line,
-                    #error-editor .ace_editor,
-                    #error-editor .ace_gutter,
-                    .background {
-                        line-height: 18px;
-                    }
-                    #error-editor.no-line-nums .ace_gutter {
-                        display: none;
-                    }
-
-                    h1,
-                    h2,
-                    h3 {
-                        font-family: "Segoe UI Light","Helvetica Neue",'RobotoLight',"Segoe UI","Segoe WP",sans-serif;
-                        font-weight: 100;
-                        line-height: normal;
-                    }
-                    h1 {
-                        font-size: 42px;
-                        margin-bottom: 0;
-                    }
-                    h2 {
-                        font-size: 28px;
-                        margin-top: 0;
-                    }
-                            .background {
-                                width: 100%;
-                                background: #111;
-
-                                padding: 18px 24px;
-                                -moz-box-sizing: border-box;
-                                box-sizing: border-box;
-
-                                /*
-                                 * Take over the page via CSS,
-                                 * so we block anything already rendered.
-                                 */
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-
-                                z-index: 100000;
-
-                                height: 100%;
-                                overflow: auto;
-                            }
-                    html.ajax {
-                        background: transparent;
-                    }
-                        html.ajax > body {
-                            background: rgba( 0, 0, 0, 0.3 );
-                            -moz-box-sizing: border-box;
-                            box-sizing: border-box;
-
-                            padding: 30px 48px;
-                        }
-                            html.ajax > body > .background {
-                                border-radius: 4px;
-                                box-shadow: 5px 8px 18px rgba( 0, 0, 0, 0.4 );
-
-                                height: auto;
-                                min-height: 0;
-
-                                overflow: hidden;
-
-                                position: relative;
-                                top: auto;
-                                left: auto;
-                                right: auto;
-                                bottom: auto;
-                            }
-
-                    #ajax-info,
-                    .ajax-button {
-                        font-size: 26px;
-                    }
-                    #ajax-info {
-                        display: none;
-                        position: relative;
-                        line-height: 100%;
-
-                        white-space: nowrap;
-                    }
-                        html.ajax #ajax-info {
-                            display: block;
-                        }
-                        html.ajax #error-file-root {
-                            display: none;
-                        }
-                    .ajax-button {
-                        padding: 2px 12px 5px 12px;
-                        margin-top: -3px;
-                        border-radius: 3px;
-                        color: #bbb;
-                        font-weight: 400;
-                    }
-                    .ajax-button,
-                    .ajax-button:visited,
-                    .ajax-button:active,
-                    .ajax-button:hover {
-                        text-decoration: none;
-                    }
-                    a.ajax-button:hover {
-                        color: #fff;
-                    }
-                    #ajax-tab {
-                        float: left;
-                        margin-right: 12px;
-
-                        background: #000;
-                        color: inherit;
-                        border: 1px solid #333;
-                        box-shadow: 0 0 2px #222;
-                        margin-top: -4px;
-                    }
-                    .ajax-buttons {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                    }
-                        #ajax-retry {
-                            float: right;
-                            background: #0E4973;
-
-                            margin-right: 12px;
-                        }
-                            #ajax-retry:hover {
-                                background: #0C70B7;
-                            }
-                        #ajax-close {
-                            float: right;
-                            background: #622;
-                        }
-                            #ajax-close:hover {
-                                background: #aa4040;
-                            }
-
-                    #error-title {
-                        margin-top: 6px;
-                        position: relative;
-                        white-space: pre-wrap;
-                    }
-                    
-                    #error-code {
-                    	font-size: 14px;
-                    	margin-bottom: 0px;
-                    	margin-top: 0px;
-                    }
-
                     <?php
-                     /*
-                     * Error Background Text.
-                     */
+                    /* STYLE.CSS */
+                    if (defined('PHPERROR_STYLE_CSS'))
+                    {
+                        $js_blob = @file_get_contents(PHPERROR_STYLE_CSS);
+                    }
+                    else
+                    {
+                        $js_blob = @file_get_contents(dirname(__FILE__) . '/php_error_style.css');
+                    }
                     ?>
-                    #error-wrap {
-                        right: 0;
-                        top: 0;
-                        position: absolute;
-
-                        width : 100%;
-                        height: 0;
-                    }
-                    #error-back {
-                        font-size: 240px;
-                        color: #211600;
-                        position: absolute;
-                        top: 60px;
-                        right: -40px;
-
-                        -webkit-transform: rotate( 24deg );
-                           -moz-transform: rotate( 24deg );
-                            -ms-transform: rotate( 24deg );
-                             -o-transform: rotate( 24deg );
-                                transform: rotate( 24deg );
-                    }
-
-                    <?php
-                    /*
-                     * Code Snippets at the top
-                     */
-                    ?>
-                    .error-file-top.has_code {
-                        position: relative;
-                        height: 42px;
-                        margin: 16px 0 3px 0;
-                    }
-                        .error-file-top > h2 {
-                            position: absolute;
-
-                            left: 0;
-                            right: 129px;
-                            bottom: 0;
-
-                            margin: 0;
-                        }
-                        .error-file-top.has_code > h2 {
-                            bottom: 3px;
-                            left: 167px;
-                        }
-
-                        .error-file-save {
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            width: 160px;
-                            line-height: 36px;
-
-                            text-align: center;
-
-                            color: #555;
-                            border: 1px solid #555;
-
-                            border-radius: 3px;
-
-                            -webkit-transition: color 200ms linear, border-color 200ms linear;
-                            -moz-transition: color 200ms linear, border-color 200ms linear;
-                            transition: color 200ms linear, border-color 200ms linear;
-                        }
-                        .error-file-save,
-                        .error-file-save:active,
-                        .error-file-save:visited,
-                        .error-file-save:hover {
-                            text-decoration: none;
-
-                            color: #555;
-                            border-color: #555;
-                        }
-                        .error-file-save:hover {
-                            color: #fff;
-                            border-color: #fff;
-                        }
-
-                        #error-linenumber {
-                            position: absolute;
-                            text-align: right;
-                            right: 101%;
-                            width: 178px;
-                        }
-                    #ajax-info,
-                    #error-file-root {
-                        color: #666;
-                    }
-                    #error-file-root {
-                        position: relative;
-                    }
-                    #error-files {
-                        line-height: 0;
-                        font-size: 0;
-
-                        position: relative;
-                        padding: 9px 0 36px 0;
-
-                        display: inline-block;
-
-                        width: 100%;
-                        -moz-box-sizing: border-box;
-                        box-sizing: border-box;
-                        padding-left: 166px;
-
-                        overflow: hidden;
-                    }
-                        /**
-                         * Two transitions are used to get them to smoothly fade,
-                         * in both directions.
-                         *
-                         * The second keeps it on screen for long enough for the
-                         * fade to occur, and then does the margin transtion to move
-                         * it out.
-                         */
-                        .error-file-lines {
-                            display: inline-block;
-                            opacity: 0;
-
-                            float: left;
-                            clear: none;
-
-                            width: 100%;
-                            margin-right: -100%;
-
-                            -webkit-transition: opacity 300ms;
-                               -moz-transition: opacity 300ms;
-                                -ms-transition: opacity 300ms;
-                                 -o-transition: opacity 300ms;
-                                    transition: opacity 300ms;
-                        }
-                        .error-file-lines.show {
-                            height: auto;
-
-                            opacity: 1;
-
-                            margin: 0;
-
-                            -webkit-transition: opacity 300ms, margin 100ms linear 300ms;
-                               -moz-transition: opacity 300ms, margin 100ms linear 300ms;
-                                -ms-transition: opacity 300ms, margin 100ms linear 300ms;
-                                 -o-transition: opacity 300ms, margin 100ms linear 300ms;
-                                    transition: opacity 300ms, margin 100ms linear 300ms;
-                        }
-                            .error-file-line {
-                                line-height: 21px;
-
-                                font-size: 16px;
-
-                                color: #ddd;
-                                list-style-type: none;
-
-                                /* needed for empty lines */
-                                min-height: 20px;
-                                padding-right: 18px;
-                                padding-bottom: 1px;
-
-                                box-sizing: border-box;
-                                padding-left: 166px;
-
-                                border-radius: 2px;
-
-                                display: inline-block;
-                                float: left;
-                                clear: both;
-
-                                position: relative;
-
-                                /* Chrome fix */
-                                min-width: 50%;
-                            }
-                                .error-file-line-number {
-                                    position: absolute;
-                                    top: 0;
-                                    right: 100%;
-                                    margin-right: 12px;
-                                    display: block;
-                                    text-indent: 0;
-                                    text-align: left;
-                                }
-
-                    #error-editor {
-                        width: 100%;
-
-                        position: relative;
-
-                        margin: 0 0 36px 0;
-                    }
-                    #error-editor {
-                        height: 450px;
-                    }
-                        #noscript-editor {
-                            width: 100%;
-                            line-height: 400px;
-                            font-size: 32px;
-                            text-align: center;
-                        }
-                        #error-editor-ace {
-                            top: 0;
-                            bottom: 0;
-                            left : 0;
-                            right: 0;
-                        }
-                                #error-editor-ace.ace_editor > .ace_gutter {
-                                    background: transparent;
-                                    color: #555;
-                                }
-                                #error-editor-ace.ace_editor .ace_print_margin_layer {
-                                    display: none;
-                                }
-                                #error-editor-ace.ace_editor .ace_indent-guide {
-                                    background: none;
-                                }
-                                #error-editor-ace.ace_editor .ace_scroller {
-                                    background-color: #111;
-                                }
-                                #error-editor-ace.ace_editor .ace_text-layer {
-                                    color: #F8F8F8;
-                                }
-                                #error-editor-ace.ace_editor .ace_cursor {
-                                    border-left: 2px solid #A7A7A7;
-                                }
-                                #error-editor-ace.ace_editor .ace_cursor.ace_overwrite {
-                                    border-left: 0px;
-                                    border-bottom: 1px solid #A7A7A7;
-                                }
-                                #error-editor-ace.ace_editor .ace_marker-layer .ace_selection {
-                                    background: rgba(221, 240, 255, 0.20);
-                                }
-                                #error-editor-ace.ace_editor.multiselect .ace_selection.start {
-                                    box-shadow: 0 0 3px 0px #141414;
-                                    border-radius: 2px;
-                                }
-                                #error-editor-ace.ace_editor .ace_marker-layer .ace_step {
-                                    background: rgb(102, 82, 0);
-                                }
-                                #error-editor-ace.ace_editor .ace_marker-layer .ace_bracket {
-                                    margin: -1px 0 0 -1px;
-                                    border: 1px solid rgba(255, 255, 255, 0.25);
-                                }
-                                #error-editor-ace.ace_editor .ace_marker-layer .ace_active_line {
-                                    background: rgba(255, 255, 255, 0.031);
-                                }
-                                #error-editor-ace.ace_editor .ace_gutter_active_line {
-                                    background-color: rgba(255, 255, 255, 0.031);
-                                }
-                                #error-editor-ace.ace_editor .ace_marker-layer .ace_selected_word {
-                                    border: 1px solid rgba(221, 240, 255, 0.20);
-                                }
-                                #error-editor-ace.ace_editor .ace_invisible {
-                                    color: rgba(255, 255, 255, 0.25);
-                                }
-                                #error-editor-ace.ace_editor .ace_identifier {
-                                    color: #F9EE98;
-                                }
-                                #error-editor-ace.ace_editor .ace_keyword,
-                                #error-editor-ace.ace_editor .ace_meta {
-                                    color:#C07041;
-                                }
-                                #error-editor-ace.ace_editor .ace_constant,
-                                #error-editor-ace.ace_editor .ace_constant.ace_other {
-                                    color:#cF5d33;
-                                }
-                                #error-editor-ace.ace_editor .ace_constant.ace_character {
-                                    color:#CF6A4C;
-                                }
-                                #error-editor-ace.ace_editor .ace_constant.ace_character.ace_escape {
-                                    color:#CF6A4C;
-                                }
-                                #error-editor-ace.ace_editor .ace_invalid.ace_illegal {
-                                    color:#F8F8F8;
-                                    background-color:rgba(86, 45, 86, 0.75);
-                                }
-                                #error-editor-ace.ace_editor .ace_invalid.ace_deprecated {
-                                    text-decoration:underline;
-                                    font-style:italic;
-                                    color:#D2A8A1;
-                                }
-                                #error-editor-ace.ace_editor .ace_support {
-                                    color:#9B859D;
-                                }
-                                #error-editor-ace.ace_editor .ace_support.ace_constant {
-                                    color:#CF6A4C;
-                                }
-                                #error-editor-ace.ace_editor .ace_fold {
-                                    background-color: #AC885B;
-                                    border-color: #F8F8F8;
-                                }
-                                #error-editor-ace.ace_editor .ace_support.ace_function {
-                                    color:#DAD085;
-                                }
-                                #error-editor-ace.ace_editor .ace_storage {
-                                    color:#F9EE98;
-                                }
-                                #error-editor-ace.ace_editor .ace_variable {
-                                    color:#AC885B;
-                                }
-                                #error-editor-ace.ace_editor .ace_string {
-                                    color:#7C9D5D;
-                                }
-                                #error-editor-ace.ace_editor .ace_string.ace_regexp {
-                                    color:#E9C062;
-                                }
-                                #error-editor-ace.ace_editor .ace_comment {
-                                    font-style:italic;
-                                    color:#5F5A60;
-                                }
-                                #error-editor-ace.ace_editor .ace_variable {
-                                    color:#798aA0;
-                                }
-                                #error-editor-ace.ace_editor .ace_xml_pe {
-                                    color:#494949;
-                                }
-                                #error-editor-ace.ace_editor .ace_meta.ace_tag {
-                                    color:#AC885B;
-                                }
-                                #error-editor-ace.ace_editor .ace_entity.ace_name.ace_function {
-                                    color:#AC885B;
-                                }
-                                #error-editor-ace.ace_editor .ace_markup.ace_underline {
-                                    text-decoration:underline;
-                                }
-                                #error-editor-ace.ace_editor .ace_markup.ace_heading {
-                                    color:#CF6A4C;
-                                }
-                                #error-editor-ace.ace_editor .ace_markup.ace_list {
-                                    color:#F9EE98;
-                                }
-                                .ace_sb::-webkit-scrollbar {
-                                    background: #111;
-                                    border: 1px solid #333;
-                                    border-radius: 2px;
-                                }
-                                .ace_sb::-webkit-scrollbar-thumb {
-                                    background: #333;
-                                }
-                                .ace_sb::-webkit-scrollbar-corner {
-                                    width: 0;
-                                    height: 0;
-                                }
-
-                    .error-editor-file {
-                        display: none;
-                    }
-                    <?php
-                    /*
-                     * Stack Trace
-                     */
-                    ?>
-                    #error-stack-trace,
-                    .error-stack-trace-line {
-                        border-spacing: 0;
-                        width: 100%;
-                    }
-                    #error-stack-trace {
-                        position: relative;
-
-                        line-height: 28px;
-                        cursor: pointer;
-                    }
-                        .error-stack-trace-exception {
-                            color: #b33;
-                        }
-                            .error-stack-trace-exception > td {
-                                padding-top: 18px;
-                            }
-                        .error-stack-trace-line {
-                            float: left;
-                        }
-                        .error-stack-trace-line.is-exception {
-                            margin-top: 18px;
-                            border-top: 1px solid #422;
-                        }
-                            .error-stack-trace-line:first-of-type > td:first-of-type {
-                                border-top-left-radius: 2px;
-                            }
-                            .error-stack-trace-line:first-of-type > td:last-of-type {
-                                border-top-right-radius: 2px;
-                            }
-                            .error-stack-trace-line:last-of-type > td:first-of-type {
-                                border-bottom-left-radius: 2px;
-                            }
-                            .error-stack-trace-line:last-of-type > td:last-of-type {
-                                border-bottom-right-radius: 2px;
-                            }
-
-                            .error-stack-trace-line > td {
-                                padding: 3px 0;
-                                vertical-align: top;
-                            }
-                            .error-stack-trace-line > .linenumber,
-                            .error-stack-trace-line > .filename,
-                            .error-stack-trace-line > .file-internal-php,
-                            .error-stack-trace-line > .lineinfo {
-                                padding-left:  18px;
-                                padding-right: 12px;
-                            }
-                            .error-stack-trace-line > .linenumber,
-                            .error-stack-trace-line > .file-internal-php,
-                            .error-stack-trace-line > .filename {
-                                white-space: pre;
-                            }
-                            .error-stack-trace-line > .linenumber {
-                                text-align: right;
-                            }
-                            .error-stack-trace-line > .file-internal-php,
-                            .error-stack-trace-line > .filename {
-                            }
-                            .error-stack-trace-line > .lineinfo {
-                                width: 100%; /* fix for chrome */
-                                padding-right:18px;
-                                padding-left: 82px;
-                                text-indent: -64px;
-                            }
-                    <?php
-                    /*
-                     * Error Dump Info (post, get, session)
-                     */
-                    ?>
-                    .error-dumps {
-                        position: relative;
-
-                        margin-top: 48px;
-                        padding-top: 32px;
-                        width: 100%;
-                        max-width: 100%;
-                        overflow: hidden;
-                    }
-                        .error_dump {
-                            float: left;
-                            clear: none;
-
-                            -moz-box-sizing: border-box;
-                            box-sizing: border-box;
-
-                            padding: 0 32px 24px 12px;
-                            max-width: 100%;
-                        }
-                        .error_dump.dump_request {
-                            clear: left;
-                            max-width: 50%;
-                            min-width: 600px;
-                        }
-                        .error_dump.dump_response {
-                            max-width: 50%;
-                            min-width: 600px;
-                        }
-                        .error_dump.dump_server {
-                            width: 100%;
-                            clear: both;
-                        }
-                        .error_dump_header {
-                            color: #eb4;
-                            margin: 0;
-                            margin-left: -6px;
-                        }
-                        .error_dump_key,
-                        .error_dump_mapping,
-                        .error_dump_value {
-                            white-space: pre;
-                            padding: 3px 6px 3px 6px;
-                            float: left;
-                        }
-                        .error_dump_key {
-                            clear: left;
-                        }
-                        .error_dump_mapping {
-                            padding: 3px 12px;
-                        }
-                        .error_dump_value {
-                            clear: right;
-                            white-space: normal;
-                            max-width: 100%;
-                        }
-
-                    <?php
-                    /*
-                     * Code and Stack highlighting colours
-                     *
-                     * The way this works, is that syntax highlighting is turned off
-                     * for .pre-highlight. It then gets turns on for .pre-highlight,
-                     * if it matches certain criteria.
-                     *
-                     * The emphasis is that pre-highlight is by default 'no highlight'.
-                     */
-                    ?>
-                    .pre-highlight,
-                    .highlight {
-                    }
-                    .is-native,
-                    .pre-highlight {
-                        opacity: 0.3;
-                        color: #999;
-                    }
-                    .is-native {
-                        opacity: 0.3 !important;
-                    }
-                    .highlight,
-                    .pre-highlight.highlight,
-                    .highlight ~ .pre-highlight {
-                        color: #eee;
-                        opacity: 1;
-                    }
-
-                    .select-highlight {
-                        background: #261313;
-                    }
-                    .select-highlight.is-native {
-                        background: #222;
-                    }
-                    .highlight {
-                        background: #391414;
-                    }
-                    .highlight.select-highlight {
-                        background: #451915;
-                    }
-
-                    .pre-highlight span,
-                    .pre-highlight:not(.highlight):first-of-type span {
-                        color : #999;
-                        border: none !important;
-                    }
-
-                    <?php
-                    /*
-                     * Syntax Highlighting
-                     */
-                    ?>
-                    .pre-highlight:first-of-type .syntax-class,
-                    .highlight ~ .pre-highlight  .syntax-class,
-                    .pre-highlight.highlight     .syntax-class,
-                                                 .syntax-class {
-                        color: #C07041;
-                    }
-                    .pre-highlight:first-of-type .syntax-function,
-                    .highlight ~ .pre-highlight  .syntax-function,
-                    .pre-highlight.highlight     .syntax-function,
-                                                 .syntax-function {
-                        color: #F9EE98;
-                    }
-                    .pre-highlight:first-of-type .syntax-literal,
-                    .highlight ~ .pre-highlight  .syntax-literal,
-                    .pre-highlight.highlight     .syntax-literal,
-                                                 .syntax-literal {
-                        color: #cF5d33;
-                    }
-                    .pre-highlight:first-of-type .syntax-string,
-                    .highlight ~ .pre-highlight  .syntax-string,
-                    .pre-highlight.highlight     .syntax-string,
-                                                 .syntax-string {
-                        color: #7C9D5D;
-                    }
-                    .pre-highlight:first-of-type .syntax-variable-not-important,
-                    .highlight ~ .pre-highlight  .syntax-variable-not-important,
-                    .pre-highlight.highlight     .syntax-variable-not-important,
-                                                 .syntax-variable-not-important {
-                        opacity: 0.5;
-                    }
-                    .pre-highlight:first-of-type .syntax-higlight-variable,
-                    .highlight ~ .pre-highlight  .syntax-higlight-variable,
-                    .pre-highlight.highlight     .syntax-higlight-variable,
-                                                 .syntax-higlight-variable {
-                        color: #f00;
-                        border-bottom: 3px dashed #c33;
-                    }
-                    .pre-highlight:first-of-type .syntax-variable,
-                    .highlight ~ .pre-highlight  .syntax-variable,
-                    .pre-highlight.highlight     .syntax-variable,
-                    .syntax-variable {
-                        color: #798aA0;
-                    }
-                    .pre-highlight:first-of-type .syntax-keyword,
-                    .highlight ~ .pre-highlight  .syntax-keyword,
-                    .pre-highlight.highlight     .syntax-keyword,
-                    .syntax-keyword {
-                        color: #C07041;
-                    }
-                    .pre-highlight:first-of-type .syntax-comment,
-                    .highlight ~ .pre-highlight  .syntax-comment,
-                    .pre-highlight.highlight     .syntax-comment,
-                    .syntax-comment {
-                        color: #5a5a5a;
-                    }
-
-                    <?php
-                    /*
-                     * File Highlighting
-                     */
-                    ?>
-                    .file-internal-php {
-                        color: #555 !important;
-                    }
-                    .pre-highlight:first-of-type .file-common,
-                    .highlight ~ .pre-highlight  .file-common,
-                    .pre-highlight.highlight     .file-common,
-                                                 .file-common {
-                        color: #eb4;
-                    }
-                    .pre-highlight:first-of-type .file-ignore,
-                    .highlight ~ .pre-highlight  .file-ignore,
-                    .pre-highlight.highlight     .file-ignore,
-                                                 .file-ignore {
-                        color: #585;
-                    }
-                    .pre-highlight:first-of-type .file-app,
-                    .highlight ~ .pre-highlight  .file-app,
-                    .pre-highlight.highlight     .file-app,
-                                                 .file-app {
-                        color: #66c6d5;
-                    }
-                    .pre-highlight:first-of-type .file-root,
-                    .highlight ~ .pre-highlight  .file-root,
-                    .pre-highlight.highlight     .file-root,
-                                                 .file-root {
-                        color: #b69;
-                    }
                 </style>
 
                 <div class="background"><?php
