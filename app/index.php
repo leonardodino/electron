@@ -11,7 +11,7 @@
         //CONFIG
         include_once './modules/config/Config.php';
         
-        if($ENV->php_error){
+        if($ENV->php_error && parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY) !== 'erroff'){
             require_once './modules/error/php_error.php';
         }
         
