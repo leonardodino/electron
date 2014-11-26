@@ -3671,4 +3671,4 @@
             reportErrors();
         }
     }
-\php_error\reportErrors();
+\php_error\reportErrors(["catch_supressed_errors"=>true]);
