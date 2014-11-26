@@ -1,7 +1,7 @@
 <?php
 //include route files
 //foreach(glob('./routes/*.route.php') as $route){include_once $route;}
-use Caching_FileFactory as FF;
+//use Caching_FileFactory as FF;
 
 Flight::route('/', function(){
 	$content = View::fetch('test.html', ['page'=>['title'=> 'Hellow World', 'text'=> 'lorem ipsum!']]);
