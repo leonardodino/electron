@@ -1,4 +1,4 @@
 .DS_Store
 dploy.yaml
 _cache/
-app/env.php
+.rev
