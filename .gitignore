@@ -2,5 +2,5 @@
 dploy.yaml
 _cache/
 .rev
-
+.local_rev
 error_log
