@@ -17,6 +17,8 @@ $cache_dir    = './app/_cache';
 $state_fname  = '.state.json';
 $state_file   = $cache_dir.'/'.$state_fname;
 $dploy_file   = './.rev';
+$dploy_file   = exists($dploy_file) ? $dploy_file : './.local_rev'; //fallback
+
 
 //state
 $isStale = false;
@@ -153,8 +155,13 @@ function main(){
 			$message = "cache is up-to-date".PHP_EOL;
 		}
 	}else{
-		$stale = true;
+		$stale  = true;
+		$dryrun = true;
+		
+		//create the file
+		
 		$message += "has no state json file".PHP_EOL;
+		$message += "creating json file and exiting".PHP_EOL;
 	}
 	echo $message;
 	
