@@ -14,21 +14,22 @@ $isCLI   = (php_sapi_name() == 'cli');
 //paths
 $content_dir  = './content';
 $cache_dir    = './app/_cache';
+
 $state_fname  = '.state.json';
 $state_file   = $cache_dir.'/'.$state_fname;
+
+$log_fname    = '.cache.log';
+$log_file     = $cache_dir.'/'.$log_fname;
+
 $dploy_file   = './.rev';
 $dploy_file   = file_exists($dploy_file) ? $dploy_file : './.local_rev'; //fallback
-
-
-//state
-$isStale = false;
 
 //options
 $force   = false;
 $dryrun  = false;
 
 if(!$isCLI) echo '<pre>';
-	
+echo PHP_EOL;
 echo 'starting chache linting!'.PHP_EOL;
 
 
@@ -58,13 +59,16 @@ echo 'enviroment: '.($isCLI ? 'cli': 'web').PHP_EOL;
 echo '    dploy:  '.$dploy_file.PHP_EOL;
 
 
-if($force){$isStale = true;}
-
 
 
 
 
 //libs
+function tailFile($file, $lines = 1){
+	//return last n lines in file, as array, usefull for truncating.
+	return array_slice(file($file), -$lines);
+}
+
 function add_trailing_character($string, $char){
 	if(substr($string, -1) !== $char){
 		$string = $string . $char;
@@ -131,15 +135,45 @@ function set_cache_state($state){
 	file_put_contents($state_file, $stateJSON);
 	touch($state_file);
 }
+function makeFile($file){
+	if(file_exists($file)){
+		return true;
+	}else{
+		return touch($file);
+	}
+}
+
+function save_log($state, $changes){
+	global $log_file;
+	if(makeFile($log_file)){	
+		$time = $state['start'];
+		
+		$info = '['.implode(', ', $changes).']';
+		
+		$tz   = explode(":", date("P", $time));
+		$date = date("d/m/Y h:iA", $time)." [GMT".intval($tz[0])."]";
+		
+		$line = $date . " \t" . $info . " \t" . json_encode($state) . PHP_EOL;
+		
+		$log   = tailFile($log_file, 99);
+		$log[] = $line;
+		$log   = implode('', $log);
+		
+		file_put_contents($log_file, $log);
+	}else{
+		echo PHP_EOL.'not possible to create logfile'.PHP_EOL;
+	}
+}
 
 function delete_cache(){
-	global $cache_dir;
+	global $cache_dir, $state_fname, $log_fname;
 	
 	$dir = $cache_dir;
 	$di = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
 	$ri = new RecursiveIteratorIterator($di, RecursiveIteratorIterator::CHILD_FIRST);
 	foreach ( $ri as $file ){
-		if(basename($file) !== $state_fname){
+		$fname = basename($file);
+		if($fname !== $state_fname && $fname !== $log_fname){
 			$file->isDir() ?  rmdir($file) : unlink($file);
 		}
 	}
@@ -147,11 +181,12 @@ function delete_cache(){
 }
 
 function main(){
-	global $state_file, $force, $stale, $dryrun;
+	global $state_file, $force, $dryrun;
 	
 	$hasStateJson  = file_exists($state_file);
 	$stale         = false;
 	$message       = PHP_EOL;
+	$changes       = [];
 	
 	#setup
 	if($hasStateJson){
@@ -162,18 +197,21 @@ function main(){
 	#step 1 - detect stale
 	if($hasStateJson){
 		if($cached_state->content < $current_state->content){
-			$stale = true;
-			$message .= "modified [content]".PHP_EOL;
+			$stale     = true;
+			$message  .= "modified [content]".PHP_EOL;
+			$changes[] = 'content';
 		}else if($cached_state->dploy !== $current_state->dploy){
-			$stale = true;
-			$message .= "modified [dploy]".PHP_EOL;
+			$stale     = true;
+			$message  .= "modified [dploy]".PHP_EOL;
+			$changes[] = 'dploy';
 		}else{
-			$message .= "not modified".PHP_EOL;
-			$message .= "cache is up-to-date".PHP_EOL;
+			$message  .= "not modified".PHP_EOL;
+			$message  .= "cache is up-to-date".PHP_EOL;
 		}
 		if($force){
-			$stale  = true;
-			$message .= "forced refresh";
+			$stale     = true;
+			$message  .= "forced refresh";
+			$changes[] = 'force';
 		}
 	}else{
 		$stale  = true;
@@ -183,15 +221,19 @@ function main(){
 		$message .= "has no state json file".PHP_EOL;
 		$message .= "creating json file, ressetting the cache, and exiting".PHP_EOL;
 	}
-	echo $message;
+	echo $message.PHP_EOL;
+	
 	
 	#step 2 - discard stale
 	#step 3 - set new state
 	if($stale && !$dryrun){
+		echo PHP_EOL;
+		echo 'deletting'.PHP_EOL;
 		delete_cache();
 		$current_state = get_current_state();
 		set_cache_state($current_state);
-		echo PHP_EOL.'cache resetted';
+		save_log($current_state, $changes);
+		echo 'cache resetted!'.PHP_EOL;	
 	}
 	
 }
