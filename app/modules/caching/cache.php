@@ -43,6 +43,7 @@ Class Caching{
 			$content .= Flight::perfLog('cached');
 				//create cache & measure size
 				$bytes = file_put_contents($cache_file, $content);
+				chmod($cache_file, 0777);
 				if($bytes === 0){throw new Exception('0bytes written');}
 				
 				$return = $bytes !== FALSE;

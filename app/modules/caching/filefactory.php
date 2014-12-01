@@ -39,6 +39,7 @@ Class Caching_FileFactory{
             if(!is_dir($dir)){unlink($dir);}
         }else if($dir !== NULL){
             mkdir($dir, 0777, true);
+            chmod($dir, 0777);
         }else{
             $dir = false;
             $err = new Exception('could not make dir');
