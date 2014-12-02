@@ -7,9 +7,10 @@ date_default_timezone_set('America/Sao_Paulo');
 $startFolder = getcwd();
 chdir(__DIR__);
 chdir('../../../'); //change to the root cms folder
-echo(getcwd());
+
 //enviroment
 $isCLI   = (php_sapi_name() == 'cli');
+$env     = ($isCLI ? 'cli': 'web');
 
 //paths
 $content_dir  = './content';
@@ -55,7 +56,7 @@ function boolstr($bool){
 echo 'options:'.PHP_EOL;
 echo '    force:  '.boolstr($force).PHP_EOL;
 echo '    dryrun: '.boolstr($dryrun).PHP_EOL;
-echo 'enviroment: '.($isCLI ? 'cli': 'web').PHP_EOL;
+echo 'enviroment: '.$env.PHP_EOL;
 echo '    dploy:  '.$dploy_file.PHP_EOL;
 
 
@@ -67,6 +68,14 @@ echo '    dploy:  '.$dploy_file.PHP_EOL;
 function tailFile($file, $lines = 1){
 	//return last n lines in file, as array, usefull for truncating.
 	return array_slice(file($file), -$lines);
+}
+
+function human_json($json){
+	if(!is_string($json)){
+		$json = json_encode($json);
+	}
+	$human = str_replace( [',', ':', '"', '{', '}'], [', ', ': ', ''], $json);
+	return $human;
 }
 
 function add_trailing_character($string, $char){
@@ -144,22 +153,27 @@ function makeFile($file){
 }
 
 function save_log($state, $changes){
-	global $log_file;
+	global $log_file, $env;
 	if(makeFile($log_file)){	
 		$time = $state['start'];
 		
-		$info = '['.implode(', ', $changes).']';
+		$_tag = '['.implode(', ', $changes).']';
 		
 		$tz   = explode(":", date("P", $time));
-		$date = date("d/m/Y h:iA", $time)." [GMT".intval($tz[0])."]";
+		$_date = date("d/m/Y h:iA", $time)." [GMT".intval($tz[0])."]";
 		
-		$line = $date . " \t" . $info . " \t" . json_encode($state) . PHP_EOL;
 		
+		$_env   = '~'.$env; 
+		$_state = human_json($state);
+		$line = [$_date, $_env, $_tag, $_state];
+		$line = implode(" \t", $line) . PHP_EOL;
+				
 		$log   = tailFile($log_file, 99);
 		$log[] = $line;
 		$log   = implode('', $log);
 		
 		file_put_contents($log_file, $log);
+		return PHP_EOL.$line;
 	}else{
 		echo PHP_EOL.'not possible to create logfile'.PHP_EOL;
 	}
@@ -193,6 +207,7 @@ function main(){
 		$cached_state  = get_cached_state();
 		$current_state = get_current_state();
 	}
+	
 	
 	#step 1 - detect stale
 	if($hasStateJson){
@@ -232,8 +247,9 @@ function main(){
 		delete_cache();
 		$current_state = get_current_state();
 		set_cache_state($current_state);
-		save_log($current_state, $changes);
+		$log = save_log($current_state, $changes);
 		echo 'cache resetted!'.PHP_EOL;	
+		echo $log;
 	}
 	
 }
