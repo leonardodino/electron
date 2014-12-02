@@ -1,0 +1,4 @@
+# Run command `./Cron.php` every 10 minutes
+TestCron:
+  script: ./Cron.php
+  interval: every 1 minutes

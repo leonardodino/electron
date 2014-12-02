@@ -196,11 +196,11 @@ function main(){
 	
 	#step 1 - detect stale
 	if($hasStateJson){
-		if($cached_state->content < $current_state->content){
+		if($cached_state['content'] < $current_state['content']){
 			$stale     = true;
 			$message  .= "modified [content]".PHP_EOL;
 			$changes[] = 'content';
-		}else if($cached_state->dploy !== $current_state->dploy){
+		}else if($cached_state['dploy'] !== $current_state['dploy']){
 			$stale     = true;
 			$message  .= "modified [dploy]".PHP_EOL;
 			$changes[] = 'dploy';
