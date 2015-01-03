@@ -87,7 +87,7 @@ Class Caching_FileFactory{
         $url           = $url ?: $_SERVER["REQUEST_URI"];
         $last_modified = $last_modified ?: time();
         
-        $etag          = sprintf('"%s-%s"', $last_modified, md5($content));
+        $etag          = 'W/'.sprintf('"%s-%s"', $last_modified, md5($content));
         
         $fingerprint = [
             "modified" => $last_modified,
