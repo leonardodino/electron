@@ -67,7 +67,7 @@ Class Caching{
 
 			//checks if client has page cached
 			if(Helpers::client_has_local_copy($cache['etag'])){
-				header('etag: '.$cache['etag']);
+				header('Etag: '.$cache['etag']);
 				header('custom: '.$cache['etag']);
 				Flight::halt(304);
 			}
