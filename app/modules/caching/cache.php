@@ -23,7 +23,7 @@ Class Caching{
 	
 	static function get_cached_version($url, $kind){
 		$filename    = FF::URL_to_CACHEFILE($url, $kind);
-		$fingerprint = FF::fingerprint_from_file($filename, $url, $kind);
+		$fingerprint = FF::fingerprint_from_file($filename, $kind, $url);
 		return $fingerprint;
 	}
 	
@@ -40,7 +40,7 @@ Class Caching{
 			//write to file
 			if($dirOK){
 			$content  = $page['content'];
-			$content .= Flight::perfLog('cached');
+			$content .= Flight::perfLog('cached', $kind);
 				//create cache & measure size
 				$bytes = file_put_contents($cache_file, $content);
 				chmod($cache_file, 0777);
@@ -61,7 +61,7 @@ Class Caching{
 	}
 	
 	
-	static function easy($url, $kind = 'html', $echo = true){
+	static function easy($url, $kind, $echo = true){
 		if(self::has_cached_version($url, $kind)){
 			$cache = self::get_cached_version($url, $kind);
 
@@ -92,8 +92,8 @@ Class Caching{
 		}
 		return false;
 	}
-	static function extraEasy($content, $kind = 'html'){
-		$page = FF::fingerprint($content);
+	static function extraEasy($content, $kind){
+		$page = FF::fingerprint($content, $kind);
 		Flight::setCached($page, true, $kind);
 		Flight::arrive(false);
 	}

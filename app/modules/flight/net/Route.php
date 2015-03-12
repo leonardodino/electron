@@ -71,6 +71,11 @@ class Route {
      * @return boolean Match status
      */
     public function matchUrl($url) {
+        // extract .json if the route isnt designed for it
+        if (substr($url, -5) == ".json" && strpos($this->pattern, ".json") === false) {
+            $url = substr($url, 0, -5);
+        }
+        
         // Wildcard or exact match
         if ($this->pattern === '*' || $this->pattern === $url) {
             if ($this->pass) {

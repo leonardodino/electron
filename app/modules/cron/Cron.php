@@ -39,8 +39,8 @@ if($isCLI){
 	$defs   = ['f'=>true, 'force'=>true, 'd'=>true, 'dryrun'=>true];
 	$args   = getopt ("fd", ["force", "dryrun"]);
 	
-	$force  = isset($args["f"]) || isset($args["force"]);
-	$dryrun = isset($args["d"]) || isset($args["dryrun"]);
+	$force  = isset($args["f"]) ?: isset($args["force"]);
+	$dryrun = isset($args["d"]) ?: isset($args["dryrun"]);
 }else{
 	$args   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
 	$args   = strtolower($args); //case-insensitive check;

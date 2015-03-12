@@ -56,6 +56,7 @@ Class Caching_FileFactory{
     //URL->FILESYSTEM resolving
     static function URL_to_CACHEPATH($url, $kind){
         $url = strtok($url,'?'); //sanitize query
+        $url = rtrim($url, '.json'); //remove json extension
         $url = self::add_trailing_slash($url);
         $url = ltrim($url, '/'); //remove beggining slash
         
@@ -83,7 +84,7 @@ Class Caching_FileFactory{
     
     
     //FINGERPRINTS standards
-    static function fingerprint($content, $last_modified = NULL,  $url = NULL, $kind = "html"){
+    static function fingerprint($content, $kind, $last_modified = NULL,  $url = NULL){
         $url           = $url ?: $_SERVER["REQUEST_URI"];
         $last_modified = $last_modified ?: time();
         
@@ -100,13 +101,13 @@ Class Caching_FileFactory{
         return $fingerprint;
     }
     
-    static function fingerprint_from_file($file, $url = NULL, $kind = 'html'){
+    static function fingerprint_from_file($file, $kind, $url = NULL){
         try{
             if(file_exists($file)){
                 $last_modified = filemtime($file);
                 $content       = file_get_contents($file);
                 
-                $fingerprint = self::fingerprint($content, $last_modified, $url, $kind);
+                $fingerprint = self::fingerprint($content, $kind, $last_modified, $url);
             }else{
                 throw new Exception('cachefile_does_not_exists');
                 $fingerprint = false;

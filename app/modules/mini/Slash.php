@@ -11,7 +11,7 @@ $transliteratedURI = _transliterate(urldecode($uri));
 
 
 
-if(substr($uri, -1) !== "/"){
+if(substr($uri, -1) !== "/" && substr($uri, -5) !== ".json" ){
 	$to_url = sprintf(
 		'%s://%s%s/',
 		isset($_SERVER['HTTPS']) ? 'https' : 'http',

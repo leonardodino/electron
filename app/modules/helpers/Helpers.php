@@ -21,7 +21,7 @@ Class Helpers{
 		//var_dump($_SERVER["REQUEST_URI"] ,  Flight::request()->url);
 		$url = $_SERVER["REQUEST_URI"];
 		$cleanurl = self::cleanUrl($url);
-		if(!preg_match('/\/$/', $url) && !preg_match('/[\.\?\&][^\/]+$/', $url)){
+		if(!preg_match('/\/$/', $url) && !preg_match('/[\.\?\&][^\/]+$/', $url) || !preg_match('/[\S\s]+\.json$/', $url) ){
 			//echo'bbb';
 			$host  = $_SERVER['HTTP_HOST'];
 			header('HTTP/1.1 301 Moved Permanently');

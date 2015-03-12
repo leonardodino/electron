@@ -18,7 +18,7 @@
  * @param		bool		$echo		automatically echo the line
  * @return	string	formated log line
  */
-Flight::map('perfLog', function($kind, $echo = false, $res_type = 'html', $time = 0){
+Flight::map('perfLog', function($kind, $res_type = 'html', $echo = false, $time = 0){
 	if(Flight::get('perfLogs')){
 		//delcaring
 		$title = $kind;
@@ -71,8 +71,9 @@ Flight::map('perfLog', function($kind, $echo = false, $res_type = 'html', $time 
  * @param		bool 	$halt		breaks the chain
  */
 Flight::map('arrive', function($halt = false){
-	echo Flight::perfLog('access');
-	echo Flight::perfLog('elapsed');
+	$res_type = Flight::get('request.kind');
+	echo Flight::perfLog('access', $res_type);
+	echo Flight::perfLog('elapsed', $res_type);
 	if($halt){
 		Flight::halt();
 	}
